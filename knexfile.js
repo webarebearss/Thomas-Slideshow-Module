@@ -8,12 +8,12 @@ module.exports = {
       database: 'bearbnb_dev',
       user:     'postgres',
       password: config.password,
-      migrations: {
-        directory: __dirname + '/db/migrations'
-      },
-      seeds: {
-        directory: __dirname + 'db/seeds/development'
-      }
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds/development'
     }
   },
 
@@ -23,12 +23,12 @@ module.exports = {
       database: 'bearbnb_staging',
       user:     'postgres',
       password: config.password,
-      migrations: {
-        directory: __dirname + '/db/migrations'
-      },
-      seeds: {
-        directory: __dirname + 'db/seeds/development'
-      }
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds/staging'
     },
     pool: {
       min: 2,
@@ -45,12 +45,12 @@ module.exports = {
       database: 'bearbnb',
       user:     'postgres',
       password: config.password,
-      migrations: {
-        directory: __dirname + '/db/migrations'
-      },
-      seeds: {
-        directory: __dirname + 'db/seeds/development'
-      }
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds/production'
     },
     pool: {
       min: 2,
