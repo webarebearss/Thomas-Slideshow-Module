@@ -2,13 +2,12 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-var db = require('../db');
+const db = require('../db');
 
 let port = 3000;
 
-app.use(bodyParser.json());
-
-app.get('rooms/:id/images', cors(), (req, res) => {
+// production endpoing will be 'rooms/:roomId/images
+app.get('rooms/static/images', cors(), (req, res) => {
   // call database
 })
 
