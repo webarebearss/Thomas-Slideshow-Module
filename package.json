@@ -1,11 +1,28 @@
 {
-  "name": "airbnbers",
+  "name": "bearbnb_slideshow_module",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "/server/server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "pg": "^7.8.0",
+    "react": "^16.8.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airbnbers/Thomas-Slideshow-Module.git"
+  },
   "author": "Thomas Hsu",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airbnbers/Thomas-Slideshow-Module/issues"
+  },
+  "homepage": "https://github.com/airbnbers/Thomas-Slideshow-Module#readme"
 }
