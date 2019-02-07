@@ -6,8 +6,7 @@ const db = require('../db');
 
 let port = 3000;
 
-// production endpoing will be 'rooms/:roomId/images
-app.get('rooms/1000/images', cors(), (req, res) => {
+app.get('rooms/:listingId/images', cors(), (req, res) => {
   // call database
 })
 

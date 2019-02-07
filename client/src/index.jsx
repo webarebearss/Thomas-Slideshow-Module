@@ -11,7 +11,7 @@ class Carousel extends React.Component {
 
 // the current listID would normally be passed in to 'static'
   componentDidMount() { 
-    fetch ('http://localhost:3000/rooms/static/images')
+    fetch ('http://localhost:3000/rooms/1000/images')
       .then(images => this.setState({
           images: images
         })
