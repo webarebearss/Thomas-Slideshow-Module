@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -9,20 +9,33 @@ class Carousel extends React.Component {
     }
   }
 
-// the current listID would normally be passed in to 'static'
+// the current listID would normally be passed in to '1000'
   componentDidMount() { 
     fetch ('http://localhost:3000/rooms/1000/images')
-      .then(images => this.setState({
+      .then(res => res.json())
+      .then(images => {
+        console.log(images);
+        this.setState({
           images: images
-        })
+        });
+       }
       )
+  }
+
+  renderImg() {
+    if (this.state.images) {
+      console.log(this.state.images[0].imgUrl);
+      return(<img src={this.state.images[0].imgUrl}/>)
+    }
   }
 
   render() {
     return (
-      <div></div>
+      <div>HI!
+        {this.renderImg()}
+      </div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('carousel'));
+ReactDOM.render(<Carousel />, document.querySelector('#carousel'));
