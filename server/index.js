@@ -18,9 +18,8 @@ app.get('/rooms/:listingId/images', cors(), (req, res) => {
     .then(() => console.log('...images sent! ------------------------'))
     .catch(err => {
       console.log('Database retrieval failed------------');
-      throw err;
     })
-    .finally(() => db.destroy());
+
 })
 
 app.listen(port);

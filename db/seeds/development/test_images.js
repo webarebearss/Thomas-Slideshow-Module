@@ -13,7 +13,7 @@ function sampleImgSet() {
     imgArr.push(
       {
         imgId: i,
-        imgUrl: faker.image.imageUrl(),
+        imgUrl: faker.image.image(),
         listingId: 1000,
         imgOrder: i,
         description: faker.random.words()
