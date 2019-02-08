@@ -24,14 +24,13 @@ class Carousel extends React.Component {
 
   renderImg() {
     if (this.state.images) {
-      console.log(this.state.images[0].imgUrl);
       return(<img src={this.state.images[0].imgUrl}/>)
     }
   }
 
   render() {
     return (
-      <div>HI!
+      <div>
         {this.renderImg()}
       </div>
     )
