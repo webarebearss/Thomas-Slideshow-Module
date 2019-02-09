@@ -26,4 +26,12 @@
   right: 30px;
 }
 
+img {
+  transition: transform 0.45s;
+}
+
+img:hover {
+  transform: scale(1.08);
+}
+
 /*# sourceMappingURL=style.css.map */

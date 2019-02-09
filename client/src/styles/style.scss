@@ -1,5 +1,5 @@
 .img-grid {
-  height: 570px
+  height: 570px;
 }
 
 .main div {
@@ -10,12 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .fill img {
   flex-shrink: 0;
-  min-height: 100%
+  min-height: 100%;
 }
 
 .view-photo-btn {
@@ -24,7 +24,14 @@
   position: absolute;
   top: 510px;
   right: 30px;
+}
 
+img {
+  transition: transform .45s;
+}
+
+img:hover {
+  transform: scale(1.08);
 }
 
 // SMALL
