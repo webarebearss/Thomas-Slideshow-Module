@@ -1,4 +1,4 @@
-# Bearbnb Slideshow Modul
+# Bearbnb Slideshow Module
 > For Bearbnb sample product page
 
 ## Related Projects
@@ -14,6 +14,15 @@
 ## Usage
 
 > npm start
+
+For dev:
+Compile-
+> npm build-sass
+> npm build-webpack
+Seed-
+> npm seed
+Test-
+> npm test
 
 ## Requirements
 
