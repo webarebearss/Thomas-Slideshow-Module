@@ -1,5 +1,5 @@
 import React from 'react';
-
+// NOTE: NEED LARGER SAMPLE IMAGES, FORCED ENGLARGE MAIN IMAGE TEMPORARILY TO CORRECTLY FILL SCREEN
 const Slideshow = ({images}) => (
   <div className='img-grid container-fluid'>
     <button type="button" className="share-btn btn btn-light d-none d-sm-block"><i className="far fa-share-square"></i>   Share</button>
@@ -9,7 +9,7 @@ const Slideshow = ({images}) => (
     <button type="button" className="view-photo-btn btn btn-light">View Photos</button>
     <div className='main row h-100'>
       <div className='fill col'>
-        <img className='main-img image-responsive' src={images[0].imgUrl}/></div> 
+        <img className='main-img image-responsive' src={images[0].imgUrl} height="600" width="800"/></div> 
       <div className='col-sm-4 col-lg-3 border-0 d-none d-sm-block'>
         <div className='fill row h-50 border-left-0 border-bottom-0'>
           <img src={images[1].imgUrl}/>
