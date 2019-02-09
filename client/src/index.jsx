@@ -25,6 +25,7 @@ class Carousel extends React.Component {
     if (this.state.images) {
       return(
         <div className='img-grid container-fluid'>
+          <button type="button" className="view-photo-btn btn btn-light">View Photos</button>
           <div className='main row h-100'>
             <div className='fill col'>
               <img className='main-img image-responsive' src={this.state.images[0].imgUrl}/></div> 
@@ -46,7 +47,7 @@ class Carousel extends React.Component {
             </div>
           </div>
         </div>
-        )
+      )
     }
   }
 
