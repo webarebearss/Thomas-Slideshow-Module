@@ -1,5 +1,5 @@
 import React from 'react';
-// NOTE: NEED LARGER SAMPLE IMAGES, FORCED ENGLARGE MAIN IMAGE TEMPORARILY TO CORRECTLY FILL SCREEN
+
 const Slideshow = ({images}) => (
   <div className='img-grid container-fluid'>
     <button type="button" className="share-btn btn btn-light d-none d-sm-block"><i className="far fa-share-square"></i>   Share</button>
