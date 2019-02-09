@@ -14,7 +14,6 @@ class Carousel extends React.Component {
     fetch ('http://localhost:3000/rooms/1000/images')
       .then(res => res.json())
       .then(images => {
-        console.log(images);
         this.setState({
           images: images
         });
@@ -27,10 +26,10 @@ class Carousel extends React.Component {
       return(
         <div className='img-grid container-fluid'>
           <div className='main row h-100'>
-            <div className='fill col-8'>
+            <div className='fill col-8 border-right-0'>
               <img className='main-img image-responsive' src={this.state.images[0].imgUrl}/></div> 
-            <div className='col-4'>
-              <div className='fill row h-50'>
+            <div className='col-4 border-0'>
+              <div className='fill row h-50 border-bottom-0'>
                 <img className='image-responsive' src={this.state.images[1].imgUrl}/>
               </div>
               <div className='fill row h-50'>

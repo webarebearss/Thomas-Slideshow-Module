@@ -26,10 +26,10 @@
     "webpack": "^2.2.1"
   },
   "scripts": {
-    "test": "jest --forceExit",
-    "build-sass": "sass --watch ./client/src/styles/:./client/dist/styles/",
     "start": "nodemon /server/index.js",
+    "build-sass": "sass --watch ./client/src/styles/:./client/dist/styles/",
     "build-webpack": "webpack -d --watch",
+    "test": "jest --forceExit",
     "seed": "knex seed:run"
   },
   "repository": {
