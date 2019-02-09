@@ -1,5 +1,5 @@
 .img-grid {
-  height: 570px;
+  height: 355px;
 }
 
 .main div {
@@ -23,21 +23,39 @@
 .share-btn {
   z-index: 3;
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 125px;
 }
 
 .save-btn {
   z-index: 3;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 25px;
+  right: 25px;
+}
+
+.share-btn-xs {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  background-color: none !important;
+  color: white !important;
+}
+
+.save-btn-xs {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: none !important;
+  color: white !important;
 }
 
 .view-photo-btn {
   z-index: 3;
   position: absolute;
-  top: 510px;
+  top: 290px;
   right: 30px;
 }
 
