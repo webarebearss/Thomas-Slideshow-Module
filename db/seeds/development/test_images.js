@@ -12,7 +12,6 @@ function sampleImgSet() {
   for (let i = 1; i <= 18; i++) {
     imgArr.push(
       {
-        imgId: i,
         imgUrl: faker.image.image(),
         listingId: 1000,
         imgOrder: i,

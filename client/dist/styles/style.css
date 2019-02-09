@@ -3,6 +3,7 @@
 }
 
 .main div {
+  background-color: black;
   border: 2px solid dimgrey;
   cursor: pointer;
 }
@@ -41,11 +42,16 @@
 }
 
 img {
-  transition: transform 0.45s;
+  transition: 0.45s;
+}
+
+div:hover img {
+  opacity: 0.75;
 }
 
 img:hover {
   transform: scale(1.08);
+  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
