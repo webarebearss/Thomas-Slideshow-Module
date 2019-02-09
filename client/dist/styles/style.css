@@ -1,9 +1,13 @@
-main {
-  height: 570px;
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-body {
-  background-color: black;
+.fill img {
+  flex-shrink: 0;
+  min-height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
