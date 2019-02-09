@@ -21,45 +21,60 @@
     img {
       width: 100%;
       object-fit: cover;
+      transition: .45s;
     }
-  }  
+
+    img:hover {
+      transform: scale(1.08);
+      opacity: 1 !important;
+    }
+  }
+
+  div:hover {
+    img {
+      opacity: 0.75;
+    }
+  }
+}
+
+@mixin position-btn() {
+  z-index: 3;
+  position: absolute;
+}
+
+@mixin clear-btn() {
+  background-color: none !important;
+  color: white !important;
 }
 
 .share-btn {
-  z-index: 3;
-  position: absolute;
+  @include position-btn();
   top: 25px;
   right: 125px;
 }
 
 .save-btn {
-  z-index: 3;
-  position: absolute;
+  @include position-btn();
   top: 25px;
   right: 25px;
 }
 
 .share-btn-xs {
-  z-index: 3;
-  position: absolute;
+  @include position-btn();
   top: 25px;
   right: 70px;
-  background-color: none !important;
-  color: white !important;
+  @include clear-btn();
 }
 
 .save-btn-xs {
-  z-index: 3;
-  position: absolute;
+  @include position-btn();
   top: 25px;
   right: 25px;
-  background-color: none !important;
-  color: white !important;
+  @include clear-btn();
 }
 
 .view-photo-btn {
-  z-index: 3;
-  position: absolute;
+  @include position-btn();
   top: 290px;
   right: 30px;
 }
@@ -70,15 +85,4 @@
   }
 }
 
-img {
-  transition: .45s;
-}
 
-div:hover img {
-  opacity: 0.75;
-}
-
-img:hover {
-  transform: scale(1.08);
-  opacity: 1 !important;
-}

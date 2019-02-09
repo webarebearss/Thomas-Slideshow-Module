@@ -2,7 +2,7 @@ import React from 'react';
 
 const Slideshow = ({images}) => (
   <div className='img-grid container-fluid'>
-    <button type="button" className="share-btn btn btn-light d-none d-sm-block"><i className="far fa-share-square"></i>   Share</button>
+    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#exampleModal"><i className="far fa-share-square"></i>   Share</button>
     <button type="button" className="save-btn btn btn-light d-none d-sm-block"><i className="far fa-heart"></i>   Save</button>
     <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-share-square"></i></button>
     <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-heart"></i></button>
@@ -28,6 +28,8 @@ const Slideshow = ({images}) => (
       </div>
     </div>
   </div>
+
+
 )
 
 export default Slideshow;
