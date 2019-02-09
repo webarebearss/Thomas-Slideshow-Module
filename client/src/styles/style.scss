@@ -19,8 +19,21 @@
   min-height: 100%;
 }
 
+.share-btn {
+  z-index: 3;
+  position: absolute;
+  top: 30px;
+  right: 125px;
+}
+
+.save-btn {
+  z-index: 3;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
 .view-photo-btn {
-  margin-bottom: 400px;
   z-index: 3;
   position: absolute;
   top: 510px;
