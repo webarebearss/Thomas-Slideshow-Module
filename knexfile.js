@@ -5,16 +5,30 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'bearbnb_dev'
+      database: 'bearbnb_dev',
+      user:     'postgres',
+      password: config.password,
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds/development'
     }
   },
 
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'bearbnb',
+      database: 'bearbnb_staging',
       user:     'postgres',
-      password: config.password
+      password: config.password,
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds/staging'
     },
     pool: {
       min: 2,
@@ -28,9 +42,15 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: 'bearbnb',
+      user:     'postgres',
+      password: config.password,
+    },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds/production'
     },
     pool: {
       min: 2,

@@ -1,0 +1,85 @@
+.img-grid {
+  height: 355px;
+}
+
+@media screen and (min-width: 960px) {
+  .img-grid {
+    height: 440px;
+  }
+}
+.main div {
+  background-color: black;
+  border: 2px solid dimgrey;
+  cursor: pointer;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+}
+
+.share-btn {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 125px;
+}
+
+.save-btn {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.share-btn-xs {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  background-color: none !important;
+  color: white !important;
+}
+
+.save-btn-xs {
+  z-index: 3;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: none !important;
+  color: white !important;
+}
+
+.view-photo-btn {
+  z-index: 3;
+  position: absolute;
+  top: 290px;
+  right: 30px;
+}
+
+@media screen and (min-width: 960px) {
+  .view-photo-btn {
+    top: 375px;
+  }
+}
+img {
+  transition: 0.45s;
+}
+
+div:hover img {
+  opacity: 0.75;
+}
+
+img:hover {
+  transform: scale(1.08);
+  opacity: 1 !important;
+}
+
+/*# sourceMappingURL=style.css.map */
