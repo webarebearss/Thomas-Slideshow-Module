@@ -11,18 +11,22 @@
   background-color: black;
   border: 2px solid dimgrey;
   cursor: pointer;
-}
-
-.fill {
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 0px;
 }
-
-.fill img {
-  flex-shrink: 0;
-  min-width: 100%;
+.main div img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.45s;
+}
+.main div img:hover {
+  transform: scale(1.08);
+  opacity: 1 !important;
+}
+.main div:hover img {
+  opacity: 0.75;
 }
 
 .share-btn {
@@ -68,18 +72,6 @@
   .view-photo-btn {
     top: 375px;
   }
-}
-img {
-  transition: 0.45s;
-}
-
-div:hover img {
-  opacity: 0.75;
-}
-
-img:hover {
-  transform: scale(1.08);
-  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
