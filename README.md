@@ -1,21 +1,34 @@
-Bearbnb Slideshow Module
-Project description
+# Bearbnb Slideshow Modul
+> For Bearbnb sample product page
 
-Related Projects
-https://github.com/airbnbers/
+## Related Projects
 
-Table of Contents
-Usage
-Photo grid and slideshow for Bearbnb sample broduct page.
+  - https://github.com/airbnbers/
 
-Some usage instructions
->npm start
+## Table of Contents
 
-Requirements
-An nvmrc file is included if using nvm.
+1. [Usage](#Usage)
+1. [Requirements](#requirements)
+1. [Development](#development)
 
-Installing Dependencies
+## Usage
+
+> npm start
+
+## Requirements
+
+An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+
+- Node 6.13.0
+- etc
+
+## Development
+
+### Installing Dependencies
+
 From within the root directory:
 
+```sh
 npm install -g webpack
 npm install
+```
