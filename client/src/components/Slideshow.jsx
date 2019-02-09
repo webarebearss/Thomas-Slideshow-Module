@@ -28,8 +28,6 @@ const Slideshow = ({images}) => (
       </div>
     </div>
   </div>
-
-
 )
 
 export default Slideshow;

@@ -1,3 +1,5 @@
+// CONTAINER
+
 .img-grid {
   height: 355px;
 }
@@ -7,6 +9,8 @@
     height: 440px;
   }
 }
+
+// IMAGES
 
 .main {
   div {
@@ -37,6 +41,8 @@
   }
 }
 
+// BUTTONS
+
 @mixin position-btn() {
   z-index: 3;
   position: absolute;
@@ -61,16 +67,16 @@
 
 .share-btn-xs {
   @include position-btn();
+  @include clear-btn();
   top: 25px;
   right: 70px;
-  @include clear-btn();
 }
 
 .save-btn-xs {
   @include position-btn();
+  @include clear-btn();
   top: 25px;
   right: 25px;
-  @include clear-btn();
 }
 
 .view-photo-btn {

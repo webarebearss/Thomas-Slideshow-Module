@@ -11,12 +11,11 @@ app.get('/rooms/:listingId/images', cors(), (req, res) => {
   console.log('Heard a GET request');
   dbutils.fetchImages(req.params.listingId)
     .then(images => {
-      console.log('Here are the images------------------------', images)
       res.send(JSON.stringify(images))
     })
-    .then(() => console.log('...images sent! ------------------------'))
+    .then(() => console.log('...images sent'))
     .catch(err => {
-      console.log('Database retrieval failed------------------------', err);
+      console.log('Database retrieval failed, err);
     })
 })
 
