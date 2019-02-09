@@ -8,22 +8,21 @@
   }
 }
 
-.main div {
-  background-color: black;
-  border: 2px solid dimgrey;
-  cursor: pointer;
-}
+.main {
+  div {
+    background-color: black;
+    border: 2px solid dimgrey;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0px;
 
-.fill {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.fill img {
-  flex-shrink: 0;
-  min-width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }  
 }
 
 .share-btn {

@@ -11,18 +11,14 @@
   background-color: black;
   border: 2px solid dimgrey;
   cursor: pointer;
-}
-
-.fill {
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 0px;
 }
-
-.fill img {
-  flex-shrink: 0;
-  min-width: 100%;
+.main div img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .share-btn {
