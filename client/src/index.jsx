@@ -28,12 +28,20 @@ class Carousel extends React.Component {
           <div className='main row h-100'>
             <div className='fill col'>
               <img className='main-img image-responsive' src={this.state.images[0].imgUrl}/></div> 
-            <div className='col-4 border-0 d-none d-sm-block'>
+            <div className='col-sm-4 col-lg-3 border-0 d-none d-sm-block'>
               <div className='fill row h-50 border-left-0 border-bottom-0'>
                 <img src={this.state.images[1].imgUrl}/>
               </div>
               <div className='fill row h-50 border-left-0'>
                 <img src={this.state.images[2].imgUrl}/>
+              </div>
+            </div>
+            <div className='col-lg-3 border-0 d-none d-lg-block'>
+              <div className='fill row h-50 border-left-0 border-bottom-0'>
+                <img src={this.state.images[3].imgUrl}/>
+              </div>
+              <div className='fill row h-50 border-left-0'>
+                <img src={this.state.images[4].imgUrl}/>
               </div>
             </div>
           </div>
