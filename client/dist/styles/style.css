@@ -2,6 +2,11 @@
   height: 355px;
 }
 
+@media screen and (min-width: 960px) {
+  .img-grid {
+    height: 440px;
+  }
+}
 .main div {
   background-color: black;
   border: 2px solid dimgrey;
@@ -10,7 +15,7 @@
 
 .fill {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   overflow: hidden;
 }
