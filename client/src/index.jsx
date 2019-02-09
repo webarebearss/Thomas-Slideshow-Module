@@ -25,15 +25,15 @@ class Carousel extends React.Component {
   renderImg() {
     if (this.state.images) {
       return(
-        <div className='container-fluid'>
-          <div className='main row'>
+        <div className='img-grid container-fluid'>
+          <div className='main row h-100'>
             <div className='fill col-8'>
               <img className='main-img image-responsive' src={this.state.images[0].imgUrl}/></div> 
             <div className='col-4'>
-              <div className='fill row'>
+              <div className='fill row h-50'>
                 <img className='image-responsive' src={this.state.images[1].imgUrl}/>
               </div>
-              <div className='fill row'>
+              <div className='fill row h-50'>
                 <img className='image-responsive' src={this.state.images[2].imgUrl}/>
               </div>
             </div>
