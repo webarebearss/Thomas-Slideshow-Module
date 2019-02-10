@@ -87,7 +87,7 @@ const PhotoGrid = ({images}) => (
           </div>
           <div className="modal-body">
 
-
+            {/* {Slideshow carousel} */}
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
               <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>

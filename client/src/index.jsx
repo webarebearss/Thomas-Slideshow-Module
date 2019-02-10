@@ -15,12 +15,7 @@ class App extends React.Component {
     this.setSizeByScreen();
     fetch ('http://localhost:3000/rooms/1000/images')
       .then(res => res.json())
-      .then(images => {
-        this.setState({
-          images: images
-        });
-       }
-      );
+      .then(images => this.setState({images}));
   };
 
   setSizeByScreen() {
