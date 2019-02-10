@@ -3,8 +3,8 @@ import React from 'react';
 const Slideshow = ({images}) => (
   <div className='img-grid container-fluid'>
     {/* {BUTTONS} */}
-    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#exampleModal"><i className="far fa-share-square"></i>   Share</button>
-    <button type="button" className="save-btn btn btn-light d-none d-sm-block"><i className="far fa-heart"></i>   Save</button>
+    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i>   Share</button>
+    <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i>   Save</button>
     <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-share-square"></i></button>
     <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-heart"></i></button>
     <button type="button" className="view-photo-btn btn btn-light">View Photos</button>
@@ -35,6 +35,45 @@ const Slideshow = ({images}) => (
     </div>
 
     {/* {MODALS} */}
+    {/* {Share modal} */}
+    <div className="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="share-modal" aria-hidden="true">
+      <div className="modal-dialog" role="document">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="share-modal-label">Share</h5>
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div className="modal-body">
+            Check out this awesome listing on Bearbnb: [listing name] <br/>
+            [Copy Link]
+          </div>
+          <div className="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    {/* {Save modal} */}
+    <div className="modal fade" id="save-modal" tabindex="-1" role="dialog" aria-labelledby="save-modal" aria-hidden="true">
+      <div className="modal-dialog" role="document">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="save-modal-label">Save to list</h5>
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div className="modal-body">
+            Sign up be email <br/>
+            Already have an Airbnb account? Log in
+          </div>
+          <div className="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 )
 
