@@ -22,11 +22,11 @@
       opacity: 1 !important;
     }
   }
+}
 
-  div:hover {
-    img {
-      opacity: 0.75;
-    }
+div:hover {
+  img {
+    opacity: 0.68;
   }
 }
 
@@ -70,14 +70,5 @@
 
 .view-photo-btn {
   @include position-btn();
-  top: 290px;
-  right: 30px;
 }
-
-@media screen and (min-width: 960px) {
-  .view-photo-btn {
-    top: 375px;
-  }
-}
-
 

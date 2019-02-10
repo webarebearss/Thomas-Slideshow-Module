@@ -19,11 +19,12 @@ class Carousel extends React.Component {
           images: images
         });
        }
-      );
+      )
+      .then(this.setSizeByScreen());
   }
 
   setSizeByScreen() {
-    //Set height breakpoints by proportion of screen.  Unfortunately only looks at primary monitor.
+    console.log(screen.height)
     document.styleSheets[2].insertRule(
       `.img-grid {
         height: ${screen.height * 0.4}px;
@@ -34,15 +35,29 @@ class Carousel extends React.Component {
         .img-grid {
           height: ${screen.height * 0.5}px;
         }
-      }`
-    )
+      }`, 1
+    );
+    document.styleSheets[2].insertRule(
+      `.view-photo-btn {
+        @include position-btn();
+        top: ${screen.height * 0.4 - 60}px;
+        right: 30px;
+      }`, 2
+    );
+    document.styleSheets[2].insertRule(
+      `@media screen and (min-width: 960px) {
+        .view-photo-btn {
+          top: ${screen.height * 0.5 - 60}px;
+        }
+      }`, 3
+    );
   }
 
   renderImgGrid() {
+
     if (this.state.images) {
       return (<Slideshow images={this.state.images}/>)
     }
-    this.setSizeByScreen();
   }
 
   render() {
