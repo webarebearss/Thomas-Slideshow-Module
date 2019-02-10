@@ -5,8 +5,8 @@ const PhotoGrid = ({images}) => (
     {/* {BUTTONS} */}
     <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i>   Share</button>
     <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i>   Save</button>
-    <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-share-square"></i></button>
-    <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-heart"></i></button>
+    <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i></button>
+    <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i></button>
     <button type="button" className="view-photo-btn btn btn-light" data-toggle="modal" data-target="#slideshow-modal">View Photos</button>
 
     {/* {PHOTOS} */}
@@ -77,7 +77,7 @@ const PhotoGrid = ({images}) => (
     </div>
     {/* {Slideshow modal} */}
     <div className="modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
-      <div className="modal-dialog modal-full" role="document">
+      <div className="modal-dialog modal-dialog-centered modal-full" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="save-modal-label">Slideshow goes here</h5>
