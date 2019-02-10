@@ -7,7 +7,7 @@ const PhotoGrid = ({images}) => (
     <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i>   Save</button>
     <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-share-square"></i></button>
     <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none"><i className="far fa-heart"></i></button>
-    <button type="button" className="view-photo-btn btn btn-light" data-toggle="modal" data-target="#share-modal">View Photos</button>
+    <button type="button" className="view-photo-btn btn btn-light" data-toggle="modal" data-target="#slideshow-modal">View Photos</button>
 
     {/* {PHOTOS} */}
     <div className="main row h-100">
@@ -77,7 +77,7 @@ const PhotoGrid = ({images}) => (
     </div>
     {/* {Slideshow modal} */}
     <div className="modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
-      <div className="modal-dialog modal-lg" role="document">
+      <div className="modal-dialog modal-full" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="save-modal-label">Slideshow goes here</h5>
@@ -86,8 +86,36 @@ const PhotoGrid = ({images}) => (
             </button>
           </div>
           <div className="modal-body">
-            Boop <br/>
-            Doop
+
+
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+              <ol className="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img className="d-block w-100" src={images[0].imgUrl} alt="First slide"/>
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={images[1].imgUrl} alt="Second slide"/>
+                </div>
+                <div className="carousel-item">
+                  <img className="d-block w-100" src={images[2].imgUrl} alt="Third slide"/>
+                </div>
+              </div>
+              <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
+              </a>
+            </div>
+
+
           </div>
           <div className="modal-footer">
           </div>
