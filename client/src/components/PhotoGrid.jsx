@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Slideshow = ({images}) => (
+const PhotoGrid = ({images}) => (
   <div className="img-grid container-fluid">
     {/* {BUTTONS} */}
     <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i>   Share</button>
@@ -36,7 +36,7 @@ const Slideshow = ({images}) => (
 
     {/* {MODALS} */}
     {/* {Share modal} */}
-    <div className="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-labelledby="share-modal" aria-hidden="true">
+    <div className="modal fade" id="share-modal" tabIndex="-1" role="dialog" aria-labelledby="share-modal" aria-hidden="true">
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
@@ -57,7 +57,7 @@ const Slideshow = ({images}) => (
       </div>
     </div>
     {/* {Save modal} */}
-    <div className="modal fade" id="save-modal" tabindex="-1" role="dialog" aria-labelledby="save-modal" aria-hidden="true">
+    <div className="modal fade" id="save-modal" tabIndex="-1" role="dialog" aria-labelledby="save-modal" aria-hidden="true">
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
@@ -76,7 +76,7 @@ const Slideshow = ({images}) => (
       </div>
     </div>
     {/* {Slideshow modal} */}
-    <div className="modal fade" id="slideshow-modal" tabindex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
+    <div className="modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
       <div className="modal-dialog modal-lg" role="document">
         <div className="modal-content">
           <div className="modal-header">
@@ -98,4 +98,4 @@ const Slideshow = ({images}) => (
   </div>
 )
 
-export default Slideshow;
+export default PhotoGrid;
