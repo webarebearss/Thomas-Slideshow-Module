@@ -15,15 +15,6 @@
 
 > npm start
 
-For dev:
-Compile-
-> npm build-sass
-> npm build-webpack
-Seed-
-> npm seed
-Test-
-> npm test
-
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
@@ -32,6 +23,17 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 - etc
 
 ## Development
+Compile:
+> npm build-sass
+> npm build-webpack
+
+Seed:
+> npm seed
+
+Test:
+> npm test
+
+Create config.js with your database password.
 
 ### Installing Dependencies
 
