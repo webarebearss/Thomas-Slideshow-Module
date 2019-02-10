@@ -1,12 +1,3 @@
-.img-grid {
-  height: 355px;
-}
-
-@media screen and (min-width: 960px) {
-  .img-grid {
-    height: 440px;
-  }
-}
 .main div {
   background-color: black;
   border: 2px solid dimgrey;
@@ -17,6 +8,7 @@
   padding: 0px;
 }
 .main div img {
+  min-height: 100% !important;
   width: 100%;
   object-fit: cover;
   transition: 0.45s;
