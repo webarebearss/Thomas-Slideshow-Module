@@ -74,25 +74,43 @@ div:hover {
 
 // MODAL
 
-.modal-full {
-  width: 100%;
-  left: 0;
-  margin-left: 0;
-  top: 0;
-  margin: 0;
-  height: 100%;
+.slideshow-modal {
+  .modal-full {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  .modal-content {
+    background-color: #262626;
+    height: auto;
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .modal-dialog {
+    margin: 0;
+  }
+
+  .carousel-indicators {
+    position: relative;
+    top: 550px;
+  }
+
+  .carousel-item {
+    img {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
 }
 
-.modal-content {
-  height: auto;
-  width: 100vw;
-  min-height: 100%;
-  border-radius: 0;
-}
 
-.modal-dialog {
-  margin: 0;
-}
+
 // .carousel-item {
 //   margin-right: 0;
 //   height: auto;

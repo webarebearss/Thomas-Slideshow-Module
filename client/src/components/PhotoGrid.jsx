@@ -76,7 +76,7 @@ const PhotoGrid = ({images}) => (
       </div>
     </div>
     {/* {Slideshow modal} */}
-    <div className="modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
+    <div className="slideshow-modal modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
       <div className="modal-dialog modal-full" role="document">
         <div className="modal-content">
           <div className="modal-header">
