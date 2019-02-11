@@ -14,10 +14,5 @@ module.exports = {
         }
       }
     ]
-  },
-  devServer: {
-    contentBase: __dirname + `/client/dist`,
-    compress: true,
-    port: 8080
   }
 };

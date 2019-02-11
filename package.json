@@ -22,14 +22,12 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-cli": "^3.2.3"
   },
   "scripts": {
     "start": "nodemon",
-    "start:dev": "webpack-dev-server --mode production",
     "build-sass": "sass --watch ./client/src/styles/:./client/dist/styles/",
-    "build-webpack": "webpack --mode production",
+    "build-webpack": "webpack --mode production --watch",
     "test": "jest --forceExit",
     "seed": "knex seed:run"
   },
