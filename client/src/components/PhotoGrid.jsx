@@ -1,19 +1,21 @@
 import React from 'react';
+import SlideshowImg from './SlideshowImg.jsx';
 
 const PhotoGrid = ({images}) => (
   <div className="img-grid container-fluid">
-    {/* {BUTTONS} */}
-    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i>   Share</button>
-    <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i>   Save</button>
+    {/* {--BUTTONS--} */}
+    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i>&emsp;Share</button>
+    <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i>&emsp;Save</button>
     <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i></button>
     <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i></button>
     <button type="button" className="view-photo-btn btn btn-light" data-toggle="modal" data-target="#slideshow-modal">View Photos</button>
 
-    {/* {PHOTOS} */}
+    {/* {--PHOTOS--} */}
     <div className="main row h-100">
 
       {/* {Main image} */}
       <div className="col"><img className="main-img" src={images[0].imgUrl} height="600" width="800"/></div> 
+      
       {/* {Subimages for sizes sm and up} */}
       <div className="col-sm-4 col-lg-3 border-left-0 d-none d-sm-block">
         <div className="row h-50 border-top-0 border-bottom-0 border-left-0">
@@ -34,7 +36,8 @@ const PhotoGrid = ({images}) => (
       </div>
     </div>
 
-    {/* {MODALS} */}
+    {/* {--MODALS--} */}
+
     {/* {Share modal} */}
     <div className="modal fade" id="share-modal" tabIndex="-1" role="dialog" aria-labelledby="share-modal" aria-hidden="true">
       <div className="modal-dialog" role="document">
@@ -56,6 +59,7 @@ const PhotoGrid = ({images}) => (
         </div>
       </div>
     </div>
+
     {/* {Save modal} */}
     <div className="modal fade" id="save-modal" tabIndex="-1" role="dialog" aria-labelledby="save-modal" aria-hidden="true">
       <div className="modal-dialog" role="document">
@@ -75,6 +79,7 @@ const PhotoGrid = ({images}) => (
         </div>
       </div>
     </div>
+    
     {/* {Slideshow modal} */}
     <div className="slideshow-modal modal fade" id="slideshow-modal" tabIndex="-1" role="dialog" aria-labelledby="slideshow-modal" aria-hidden="true">
       <div className="modal-dialog modal-full" role="document">
