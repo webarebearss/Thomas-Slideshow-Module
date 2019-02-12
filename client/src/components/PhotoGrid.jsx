@@ -108,6 +108,16 @@ const PhotoGrid = ({images}) => (
 
             {/* {Slideshow carousel} */}
             <div id="carousel-custom" className="carousel slide" data-ride="carousel">
+            {/* {Slideshow carousel images} */}              
+              <div className="carousel-inner" role="listbox">
+                <div className="carousel-item active">
+                  <img className="d-block w-100" src={images[0].imgUrl} alt={images[0].description}/>
+                  <div class="carousel-caption">
+                    <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
+                  </div>
+                </div>
+                 {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
+              </div>
             {/* {Slideshow carousel indicators} */}
               {/* <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -121,16 +131,6 @@ const PhotoGrid = ({images}) => (
                   <img src="http://placehold.it/100x50&text=slide2" alt="..." class="img-responsive"/>
                 </li>
               </ol> 
-            {/* {Slideshow carousel images} */}              
-              <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active">
-                  <img className="d-block w-100" src={images[0].imgUrl} alt={images[0].description}/>
-                  <div class="carousel-caption">
-                    <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
-                  </div>
-                </div>
-                 {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
-              </div>
               {/* {Slideshow carousel controls} */}
               <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
