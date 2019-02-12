@@ -107,11 +107,11 @@ const PhotoGrid = ({images}) => (
           <div className="modal-body">
 
             {/* {Slideshow carousel} */}
-            <div id="carousel-custom" className="carousel slide" data-ride="carousel">
+            <div id="carousel-custom" className="carousel slide" data-ride="carousel" data-interval="false">
             {/* {Slideshow carousel images} */}              
               <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active">
-                  <img className="d-block w-100" src={images[0].imgUrl} alt={images[0].description}/>
+                  <img className="d-block" src={images[0].imgUrl} alt={images[0].description}/>
                   <div class="carousel-caption">
                     <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
                   </div>
@@ -119,7 +119,7 @@ const PhotoGrid = ({images}) => (
                  {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
               </div>
             {/* {Slideshow carousel indicators} */}
-              <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block">
+              <ol class="carousel-indicators">
                 <li data-target="#carousel-custom" data-slide-to="0" class="active">
                   <img src={images[0].imgUrl} alt="images[0].description" class="img-responsive"/>
                 </li>
@@ -136,8 +136,6 @@ const PhotoGrid = ({images}) => (
               </a>
             </div>
 
-          </div>
-          <div className="modal-footer">
           </div>
         </div>
       </div>
