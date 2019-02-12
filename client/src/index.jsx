@@ -21,26 +21,26 @@ class App extends React.Component {
   setSizeByScreen() {
     document.styleSheets[2].insertRule(
       `.img-grid {
-        height: ${screen.height * 0.4}px;
+        height: ${ screen.height * 0.4 }px;
       }`
     );
     document.styleSheets[2].insertRule(
       `@media screen and (min-width: 960px) {
         .img-grid {
-          height: ${screen.height * 0.5}px;
+          height: ${ screen.height * 0.5 }px;
         }
       }`, 1
     );
     document.styleSheets[2].insertRule(
       `.view-photo-btn {
-        top: ${screen.height * 0.4 - 60}px;
+        top: ${ screen.height * 0.4 - 60 }px;
         right: 30px;
       }`, 2
     );
     document.styleSheets[2].insertRule(
       `@media screen and (min-width: 960px) {
         .view-photo-btn {
-          top: ${screen.height * 0.5 - 60}px;
+          top: ${ screen.height * 0.5 - 60 }px;
         }
       }`, 3
     );

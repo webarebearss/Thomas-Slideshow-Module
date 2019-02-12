@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
 
 function sampleImgSet() {
   let imgArr = [];
-  for (let i = 1; i <= 18; i++) {
+  for (let i = 0; i < 18; i++) {
     imgArr.push(
       {
         imgUrl: faker.image.image(),
