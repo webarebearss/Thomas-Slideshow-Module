@@ -103,7 +103,7 @@ div:hover {
 
   .carousel-item {
     img {
-      max-width: 40vw;
+      max-width: 80vw;
       height: auto;
       max-height: 100vw;
       margin: auto;
@@ -116,12 +116,12 @@ div:hover {
   }
 
   .carousel-indicators {
-    margin: 10px 0 0;
-    overflow: auto;
+    margin: 10px auto;
+    overflow: hidden;
     position: static;
     text-align: left;
     white-space: nowrap;
-    width: 100%;
+    width: 80vw;
 
     li {
       background-color: transparent;
@@ -133,10 +133,11 @@ div:hover {
       width: auto;
 
       img {
+        margin: 10px;
         display: block;
         opacity: 0.5;
-        width: 60px;
-        height: 40px;
+        width: 90px;
+        height: 60px;
       }
 
       .active {
