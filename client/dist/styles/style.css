@@ -81,5 +81,10 @@ div:hover img {
   max-width: 70%;
   margin: auto;
 }
+@media screen and (max-width: 575.98px) {
+  .slideshow-modal .carousel-item img {
+    max-width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
