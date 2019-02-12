@@ -101,6 +101,10 @@
   left: auto;
   right: auto;
 }
+.slideshow-modal .display-photo {
+  display: flexbox;
+  margin: auto;
+}
 .slideshow-modal .carousel-indicators {
   margin: 10px auto;
   overflow: hidden;

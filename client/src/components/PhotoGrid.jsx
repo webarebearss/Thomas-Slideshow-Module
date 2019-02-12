@@ -110,30 +110,33 @@ const PhotoGrid = ({images}) => (
             <div id="carousel-custom" className="carousel slide" data-ride="carousel" data-interval="false">
             {/* {Slideshow carousel images} */}              
               <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active">
-                  <img className="d-block" src={images[0].imgUrl} alt={images[0].description}/>
-                  <div class="carousel-caption">
-                    <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
+                <div className="display-photo">
+                  <div className="carousel-item active">
+                    <img className="d-block" src={images[0].imgUrl} alt={images[0].description}/>
+                    <div className="carousel-caption">
+                      <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
+                    </div>
                   </div>
+                  {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
                 </div>
-                 {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
-              </div>
-            {/* {Slideshow carousel indicators} */}
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-custom" data-slide-to="0" class="active">
-                  <img src={images[0].imgUrl} alt="images[0].description" class="img-responsive"/>
-                </li>
-                {images.slice(1).map((image, i) => <SlideshowThumb image={image} key={i}/>)}
-              </ol> 
-              {/* {Slideshow carousel controls} */}
-              <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-              </a>
-              <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-              </a>
+                {/* {Slideshow carousel controls} */}
+                <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev">
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="sr-only">Previous</span>
+                </a>
+                <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next">
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="sr-only">Next</span>
+                </a>
+                </div> 
+              {/* {Slideshow carousel indicators} */}
+                <ol className="carousel-indicators">
+                  <li data-target="#carousel-custom" data-slide-to="0" className="active">
+                    <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
+                  </li>
+                  {images.slice(1).map((image, i) => <SlideshowThumb image={image} key={i}/>)}
+                </ol>
+
             </div>
 
           </div>

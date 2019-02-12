@@ -127,7 +127,12 @@
     position: relative;
     left: auto;
     right: auto;
-}
+  }
+
+  .display-photo {
+    display: flexbox;
+    margin: auto;
+  }
 
   .carousel-indicators {
     margin: 10px auto;
@@ -156,8 +161,11 @@
           opacity: 1 !important;
         }
       }
+
     }
 
   }
+
+
 
 }
