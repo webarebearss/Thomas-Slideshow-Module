@@ -5,15 +5,29 @@ import SlideshowThumb from './SlideshowThumb.jsx';
 const PhotoGrid = ({images}) => (
   <div className="img-grid container-fluid">
     {/* {--BUTTONS--} */}
-    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i>&emsp;Share</button>
-    <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i>&emsp;Save</button>
-    <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#share-modal"><i className="far fa-share-square"></i></button>
-    <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#save-modal"><i className="far fa-heart"></i></button>
-    <button type="button" className="view-photo-btn btn btn-light" data-toggle="modal" data-target="#slideshow-modal">View Photos</button>
+    {/* {Share} */}
+    <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal">
+      <i className="far fa-share-square"></i>&emsp;Share
+    </button>
+    {/* {Share xs} */}
+    <button type="button" className="share-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#share-modal">
+      <i className="far fa-share-square"></i>
+    </button>
+    {/* {Save} */}
+    <button type="button" className="save-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#save-modal">
+      <i className="far fa-heart"></i>&emsp;Save
+    </button>
+    {/* {Save xs} */}
+    <button type="button" className="save-btn-xs btn btn-link d-block d-sm-none" data-toggle="modal" data-target="#save-modal">
+      <i className="far fa-heart"></i>
+    </button>
+    {/* {View photos} */}
+    <button type="button" className="view-photo-btn btn btn-light" data-toggle="modal" data-target="#slideshow-modal">
+      View Photos
+    </button>
 
     {/* {--PHOTOS--} */}
     <div className="main row h-100">
-
       {/* {Main image} */}
       <div className="col"><img className="main-img" src={images[0].imgUrl} height="600" width="800"/></div> 
       
@@ -38,7 +52,6 @@ const PhotoGrid = ({images}) => (
     </div>
 
     {/* {--MODALS--} */}
-
     {/* {Share modal} */}
     <div className="modal fade" id="share-modal" tabIndex="-1" role="dialog" aria-labelledby="share-modal" aria-hidden="true">
       <div className="modal-dialog" role="document">
@@ -102,7 +115,7 @@ const PhotoGrid = ({images}) => (
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img className="d-block w-100" src={images[0].imgUrl} alt={images[0].description}/>
-                  <div class="carousel-caption d-none d-md-block">
+                  <div class="carousel-caption">
                     <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
                   </div>
                 </div>
@@ -117,7 +130,6 @@ const PhotoGrid = ({images}) => (
                 <span className="sr-only">Next</span>
               </a>
             </div>
-
 
           </div>
           <div className="modal-footer">
