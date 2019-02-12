@@ -102,8 +102,11 @@ const PhotoGrid = ({images}) => (
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img className="d-block w-100" src={images[0].imgUrl} alt={images[0].description}/>
+                  <div class="carousel-caption d-none d-md-block">
+                    <p>{images[0].imgOrder}/{images.length}: {images[0].description}</p>
+                  </div>
                 </div>
-                 {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i}/>)}
+                 {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
               </div>
               <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

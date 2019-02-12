@@ -46,7 +46,7 @@ class App extends React.Component {
       }`, 3
     );
   }
-
+ 
   renderImgGrid() {
     if (this.state.images) {
       return (<PhotoGrid images={this.state.images}/>)

@@ -77,10 +77,6 @@ div:hover img {
 .slideshow-modal .modal-dialog {
   margin: 0;
 }
-.slideshow-modal .carousel-indicators {
-  position: relative;
-  top: 550px;
-}
 .slideshow-modal .carousel-item img {
   max-width: 70%;
   margin: auto;
