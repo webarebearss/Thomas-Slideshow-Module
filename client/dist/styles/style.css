@@ -111,6 +111,8 @@ div:hover img {
 .slideshow-modal .carousel-indicators li img {
   display: block;
   opacity: 0.5;
+  width: 60px;
+  height: 40px;
 }
 .slideshow-modal .carousel-indicators li .active img {
   opacity: 1;
