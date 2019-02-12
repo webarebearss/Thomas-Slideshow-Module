@@ -11,7 +11,7 @@
   min-height: 100% !important;
   width: 100%;
   object-fit: cover;
-  transition: 0.45s;
+  transition: all 0.45s ease 0s;
 }
 .main div img:hover {
   transform: scale(1.08);
