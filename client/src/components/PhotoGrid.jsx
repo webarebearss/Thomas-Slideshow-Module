@@ -107,12 +107,20 @@ const PhotoGrid = ({images}) => (
           <div className="modal-body">
 
             {/* {Slideshow carousel} */}
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+            <div id="carousel-custom" className="carousel slide" data-ride="carousel">
             {/* {Slideshow carousel indicators} */}
-              <ol className="carousel-indicators">
+              {/* <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 {images.slice(1).map(image => <SlideshowThumb key={image.imgOrder}/>)}
-              </ol>
+              </ol> */}
+              <ol class="carousel-indicators visible-sm-block hidden-xs-block visible-md-block visible-lg-block">
+                <li data-target="#carousel-custom" data-slide-to="0" class="active">
+                  <img src="http://placehold.it/100x50&text=slide1" alt="..." class="img-responsive"/>
+                </li>
+                <li data-target="#carousel-custom" data-slide-to="1">
+                  <img src="http://placehold.it/100x50&text=slide2" alt="..." class="img-responsive"/>
+                </li>
+              </ol> 
             {/* {Slideshow carousel images} */}              
               <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active">
@@ -124,11 +132,11 @@ const PhotoGrid = ({images}) => (
                  {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
               </div>
               {/* {Slideshow carousel controls} */}
-              <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="sr-only">Previous</span>
               </a>
-              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="sr-only">Next</span>
               </a>
