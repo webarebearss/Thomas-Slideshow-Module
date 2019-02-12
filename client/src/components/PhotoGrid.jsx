@@ -108,11 +108,13 @@ const PhotoGrid = ({images}) => (
 
             {/* {Slideshow carousel} */}
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+            {/* {Slideshow carousel indicators} */}
               <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 {images.slice(1).map(image => <SlideshowThumb key={image.imgOrder}/>)}
               </ol>
-              <div className="carousel-inner">
+            {/* {Slideshow carousel images} */}              
+              <div className="carousel-inner" role="listbox">
                 <div className="carousel-item active">
                   <img className="d-block w-100" src={images[0].imgUrl} alt={images[0].description}/>
                   <div class="carousel-caption">
@@ -121,6 +123,7 @@ const PhotoGrid = ({images}) => (
                 </div>
                  {images.slice(1).map((image, i) => <SlideshowImg image={image} key={i} setLength={images.length}/>)}
               </div>
+              {/* {Slideshow carousel controls} */}
               <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="sr-only">Previous</span>
