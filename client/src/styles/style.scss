@@ -114,11 +114,17 @@
     min-height: 100%;
   }
 
+  .display-photo {
+    display: contents;
+    margin: auto;
+    width: 80vw;
+  }
+  
   .carousel-item {
     img {
+      // min-height: 100% !important;
       min-height: 100% !important;
-      width: auto;
-      object-fit: fill;
+      object-fit: cover;
       margin: 0 auto;
     }
   }
@@ -127,11 +133,20 @@
     position: relative;
     left: auto;
     right: auto;
+    padding-bottom: 0px;
+    p {
+      margin-bottom: 0px;
+    }
   }
 
-  .display-photo {
-    display: flexbox;
-    margin: auto;
+  .carousel-control-prev {
+    position: absolute;
+    left: 20px;
+  }
+    
+  .carousel-control-next {
+    position: absolute;
+    right: 20px;
   }
 
   .carousel-indicators {
@@ -140,7 +155,7 @@
     position: static;
     text-align: left;
     white-space: nowrap;
-    width: 80vw;
+    max-width: 80vw;
 
     li {
       background-color: #262626;
