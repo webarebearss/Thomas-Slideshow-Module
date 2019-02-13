@@ -126,6 +126,7 @@
       min-height: 100% !important;
       object-fit: cover;
       margin: 0 auto;
+      max-width: 80vw;
     }
   }
 
@@ -149,13 +150,19 @@
     right: 20px;
   }
 
-  .carousel-indicators {
-    margin: 10px auto;
+  .filmstrip {
+    margin: 0 10vw;
     overflow: hidden;
+    height: 100px;
+  }
+
+  .carousel-indicators {
+    margin: 0 0 0 10vw;
     position: static;
     text-align: left;
     white-space: nowrap;
-    max-width: 80vw;
+    display: inline-block;
+
 
     li {
       background-color: #262626;

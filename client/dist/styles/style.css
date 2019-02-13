@@ -99,6 +99,7 @@
   min-height: 100% !important;
   object-fit: cover;
   margin: 0 auto;
+  max-width: 80vw;
 }
 .slideshow-modal .carousel-caption {
   position: relative;
@@ -117,13 +118,17 @@
   position: absolute;
   right: 20px;
 }
-.slideshow-modal .carousel-indicators {
-  margin: 10px auto;
+.slideshow-modal .filmstrip {
+  margin: 0 10vw;
   overflow: hidden;
+  height: 100px;
+}
+.slideshow-modal .carousel-indicators {
+  margin: 0 0 0 10vw;
   position: static;
   text-align: left;
   white-space: nowrap;
-  max-width: 80vw;
+  display: inline-block;
 }
 .slideshow-modal .carousel-indicators li {
   background-color: #262626;
