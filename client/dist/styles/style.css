@@ -67,6 +67,12 @@
   margin: 0;
   height: 100%;
 }
+.slideshow-modal .close {
+  color: white;
+  font-size: 4rem;
+  font-weight: 200;
+  text-shadow: none;
+}
 .slideshow-modal .modal-content {
   background-color: #262626;
   height: auto;
