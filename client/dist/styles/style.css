@@ -96,7 +96,7 @@
   width: 80vw;
 }
 .slideshow-modal .carousel-item img {
-  min-height: 100% !important;
+  max-height: 100vh !important;
   object-fit: cover;
   margin: 0 auto;
   max-width: 80vw;
@@ -121,14 +121,16 @@
 .slideshow-modal .filmstrip {
   margin: 0 10vw;
   overflow: hidden;
-  height: 100px;
+  height: 113px;
+  vertical-align: top;
 }
 .slideshow-modal .carousel-indicators {
-  margin: 0 0 0 10vw;
+  vertical-align: top;
   position: static;
   text-align: left;
   white-space: nowrap;
   display: inline-block;
+  margin: 0;
 }
 .slideshow-modal .carousel-indicators li {
   background-color: #262626;
