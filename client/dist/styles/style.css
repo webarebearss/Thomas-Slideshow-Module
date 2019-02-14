@@ -119,8 +119,16 @@
 #save-modal .google:hover {
   background-color: white;
 }
+#save-modal .email-signup {
+  border: none;
+  background-color: #ff5a5f;
+}
+#save-modal .email-signup i {
+  color: white !important;
+}
 #save-modal .or-wrapper {
   display: flex;
+  padding-bottom: 20px;
 }
 #save-modal .or-wrapper div {
   padding: 0;

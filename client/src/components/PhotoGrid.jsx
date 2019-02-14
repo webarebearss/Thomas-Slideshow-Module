@@ -98,6 +98,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
                 <div className="row"></div>
               </div>
             </div>
+            <button type="button" className="btn btn-primary btn-block email-signup"><i class="far fa-envelope"></i>&nbsp;Sign up with Email</button>
           </div>
           <div className="modal-footer">
           </div>

@@ -148,9 +148,18 @@ $btn-margin: 25px;
   .google:hover {
     background-color: white;
   }
+
+  .email-signup {
+    border: none;
+    background-color: rgb(255, 90, 95);
+    i {
+      color: white !important;
+    }
+  }
   
   .or-wrapper {
     display: flex;
+    padding-bottom: 20px;
     div {
       padding: 0;
     }
