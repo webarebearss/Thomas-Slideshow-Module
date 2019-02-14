@@ -11,14 +11,14 @@
   min-height: 100% !important;
   width: 100%;
   object-fit: cover;
-  transition: 0.45s;
+  transition: all 0.45s ease 0s;
 }
 .main div img:hover {
   transform: scale(1.08);
   opacity: 1 !important;
 }
 
-div:hover img {
+.main:hover img {
   opacity: 0.68;
 }
 
@@ -59,7 +59,7 @@ div:hover img {
   position: absolute;
 }
 
-.modal-full {
+.slideshow-modal .modal-full {
   width: 100%;
   left: 0;
   margin-left: 0;
@@ -67,16 +67,92 @@ div:hover img {
   margin: 0;
   height: 100%;
 }
-
-.modal-content {
+.slideshow-modal .close {
+  color: white;
+  font-size: 4rem;
+  font-weight: 200;
+  text-shadow: none;
+}
+.slideshow-modal .modal-content {
+  background-color: #262626;
   height: auto;
   width: 100vw;
-  min-height: 100%;
+  min-height: 100vh;
   border-radius: 0;
 }
-
-.modal-dialog {
+.slideshow-modal .modal-dialog {
   margin: 0;
+}
+.slideshow-modal .modal-header {
+  height: 87px;
+  border: none;
+}
+.slideshow-modal .modal-body {
+  padding: 0;
+}
+.slideshow-modal .modal-footer {
+  border: none;
+}
+.slideshow-modal .carousel-inner {
+  min-height: 100%;
+}
+.slideshow-modal .display-photo {
+  display: contents;
+  margin: auto;
+  width: 80vw;
+}
+.slideshow-modal .carousel-item img {
+  max-height: 100vh !important;
+  object-fit: cover;
+  margin: 0 auto;
+  max-width: 80vw;
+}
+.slideshow-modal .carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+  padding-bottom: 0px;
+}
+.slideshow-modal .carousel-caption p {
+  margin-bottom: 0px;
+}
+.slideshow-modal .carousel-control-prev {
+  position: absolute;
+  left: 20px;
+}
+.slideshow-modal .carousel-control-next {
+  position: absolute;
+  right: 20px;
+}
+.slideshow-modal .filmstrip {
+  margin: 0 10vw;
+  overflow: hidden;
+  height: 113px;
+  vertical-align: top;
+}
+.slideshow-modal .carousel-indicators {
+  vertical-align: top;
+  position: static;
+  text-align: left;
+  white-space: nowrap;
+  display: inline-block;
+  margin: 0;
+}
+.slideshow-modal .carousel-indicators li {
+  background-color: #262626;
+  display: inline-block;
+  height: auto;
+  margin: 0 !important;
+  width: auto;
+}
+.slideshow-modal .carousel-indicators li img {
+  margin: 10px;
+  display: block;
+  width: 100px;
+  height: 67px;
+}
+.slideshow-modal .carousel-indicators li .active img {
+  opacity: 1 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
