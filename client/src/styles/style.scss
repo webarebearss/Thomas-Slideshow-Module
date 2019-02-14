@@ -123,12 +123,13 @@
   }
 
   .image-arrow-wrapper {
-    width: 80vh;
+    width: 80vw;
+    max-width: 576px;
     margin: auto;
     overflow: hidden;
   }
 
-  @media screen and (min-width: 576px) {
+  @media screen and (max-width: 576px) {
     .image-arrow-wrapper {
       width: 100vw;
     }
@@ -147,7 +148,7 @@
     left: auto;
     right: auto;
     padding-bottom: 0px;
-    text-align: left;z
+    text-align: left;
     p {
       margin-bottom: 0px;
     }
@@ -155,17 +156,32 @@
 
   .carousel-control-prev {
     position: absolute;
-    left: 20px;
+    left: 15px;
   }
     
   .carousel-control-next {
     position: absolute;
-    right: 20px;
+    right: 15px;
+  }
+
+  @media screen and (min-width: 576px) {
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      height: 50px;
+      width: 50px;
+    }
   }
 
   .filmstrip {
-    margin: 0;
+    width: 80vw !important;
+    max-width: 576px;
+    margin: auto;
     overflow: hidden;
+  }
+
+  @media screen and (max-width: 576px) {
+    .filmstrip {
+      width: 100vw !important;
+    }
   }
 
   .carousel-indicators {
