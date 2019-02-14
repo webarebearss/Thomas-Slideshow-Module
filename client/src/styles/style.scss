@@ -77,6 +77,41 @@ $btn-margin: 25px;
 
 // MODAL
 
+.modal-content {
+  border-radius: 0;
+}
+
+// Share and Save modals
+#share-modal, #save-modal {
+
+  .modal-content {
+    padding: 25px;
+  }
+
+  .modal-header {
+    display: block;
+    padding: 0px 0px 20px 0px;
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+
+  .close {
+    position: static;
+    float: none;
+    margin: 0;
+    padding: 0px 0px 20px 0px;
+    font-size: 2rem;
+    font-weight: 200;
+    outline: none;
+  }
+
+  .modal-body {
+    padding: 20px 0px;
+  }
+}
+
 // Slideshow modal
 .slideshow-modal {
   .modal-full {
@@ -93,6 +128,7 @@ $btn-margin: 25px;
     font-weight: 200;
     text-shadow: none;
     outline: none;
+    margin-top: auto;
   }
 
   .modal-content {

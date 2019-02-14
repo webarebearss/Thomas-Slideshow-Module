@@ -10,7 +10,7 @@ class App extends React.Component {
     };
   }
 
-// Seed currently contains listingIds from 1000-1099 - make sure to use valid endpoint.
+// Seed currently contains listingIds from 1-100 - make sure to use valid endpoint (e.g. "http://localhost:3000/rooms/3/").
   componentDidMount() { 
     let listingId = window.location.pathname.split('/')[2];
     this.setSizeByScreen();
