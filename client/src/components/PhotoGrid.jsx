@@ -100,6 +100,8 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
             </div>
             <button type="button" className="btn btn-primary btn-block email-signup"><i class="far fa-envelope"></i>&nbsp;Sign up with Email</button>
           </div>
+          <div className="bottom-border"></div>
+          <p>Already have a Bearbnb account?&nbsp;<strong>Log in</strong></p>
           <div className="modal-footer">
           </div>
         </div>

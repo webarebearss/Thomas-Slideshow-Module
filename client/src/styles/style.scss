@@ -149,14 +149,6 @@ $btn-margin: 25px;
     background-color: white;
   }
 
-  .email-signup {
-    border: none;
-    background-color: rgb(255, 90, 95);
-    i {
-      color: white !important;
-    }
-  }
-  
   .or-wrapper {
     display: flex;
     padding-bottom: 20px;
@@ -173,6 +165,20 @@ $btn-margin: 25px;
       padding: 0;
       text-align: center;
     }
+  }
+  .email-signup {
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgb(255, 90, 95);
+    i {
+      color: white !important;
+    }
+  }
+  p {
+    text-align: center;
+  }
+  strong {
+    color: darkcyan;
   }
   .modal-footer {
     border: none;
