@@ -121,6 +121,7 @@
   text-align: left;
 }
 .slideshow-modal .carousel-caption p {
+  font-size: 0.75em;
   margin-bottom: 0px;
 }
 .slideshow-modal .carousel-control-prev {
