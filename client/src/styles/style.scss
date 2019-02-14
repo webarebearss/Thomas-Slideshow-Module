@@ -118,15 +118,20 @@
     border: none;
   }
 
+  // Slideshow carousel
+  @mixin masking-div() {
+    width: 80vw;
+    max-width: 576px;
+    margin: auto;
+    overflow: hidden;
+  }
+
   .carousel-inner {
     min-height: 100%;
   }
 
   .image-arrow-wrapper {
-    width: 80vw;
-    max-width: 576px;
-    margin: auto;
-    overflow: hidden;
+    @include masking-div();
   }
 
   @media screen and (max-width: 576px) {
@@ -172,10 +177,7 @@
   }
 
   .filmstrip {
-    width: 80vw !important;
-    max-width: 576px;
-    margin: auto;
-    overflow: hidden;
+    @include masking-div();
   }
 
   @media screen and (max-width: 576px) {

@@ -138,7 +138,7 @@
   }
 }
 .slideshow-modal .filmstrip {
-  width: 80vw !important;
+  width: 80vw;
   max-width: 576px;
   margin: auto;
   overflow: hidden;
