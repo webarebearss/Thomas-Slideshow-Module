@@ -10,10 +10,11 @@ class App extends React.Component {
     };
   }
 
-// the current listID would normally be passed in where '1000' is
+// Seed currently contains listingIds from 1000-1099 - make sure to use valid endpoint.
   componentDidMount() { 
+    let listingId = window.location.pathname.split('/')[2];
     this.setSizeByScreen();
-    fetch ('http://localhost:3000/rooms/1000/images')
+    fetch (`http://localhost:3000/rooms/${listingId}/images`)
       .then(res => res.json())
       .then(images => this.setState({images}));
   };
