@@ -90,6 +90,7 @@
     font-size: 4rem;
     font-weight: 200;
     text-shadow: none;
+    outline: none;
   }
 
   .modal-content {
@@ -121,19 +122,23 @@
     min-height: 100%;
   }
 
-  .display-photo {
-    display: contents;
+  .image-arrow-wrapper {
+    width: 80vh;
     margin: auto;
-    width: 80vw;
+    overflow: hidden;
+  }
+
+  @media screen and (min-width: 576px) {
+    .image-arrow-wrapper {
+      width: 100vw;
+    }
   }
   
   .carousel-item {
     img {
-      // min-height: 100% !important;
-      max-height: 100vh !important;
-      object-fit: cover;
+      object-fit: fill;
       margin: 0 auto;
-      max-width: 80vw;
+      max-width: 100%;
     }
   }
 
@@ -142,6 +147,7 @@
     left: auto;
     right: auto;
     padding-bottom: 0px;
+    text-align: left;z
     p {
       margin-bottom: 0px;
     }
@@ -158,18 +164,15 @@
   }
 
   .filmstrip {
-    margin: 0 10vw;
+    margin: 0;
     overflow: hidden;
-    height: 113px;
-    vertical-align: top;
   }
 
   .carousel-indicators {
-    vertical-align: top;
     position: static;
     text-align: left;
     white-space: nowrap;
-    display: inline-block;
+    display: block;
     margin: 0;
 
 

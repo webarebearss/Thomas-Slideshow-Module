@@ -72,6 +72,7 @@
   font-size: 4rem;
   font-weight: 200;
   text-shadow: none;
+  outline: none;
 }
 .slideshow-modal .modal-content {
   background-color: #262626;
@@ -96,24 +97,29 @@
 .slideshow-modal .carousel-inner {
   min-height: 100%;
 }
-.slideshow-modal .display-photo {
-  display: contents;
+.slideshow-modal .image-arrow-wrapper {
+  width: 80vh;
   margin: auto;
-  width: 80vw;
+  overflow: hidden;
+}
+@media screen and (min-width: 576px) {
+  .slideshow-modal .image-arrow-wrapper {
+    width: 100vw;
+  }
 }
 .slideshow-modal .carousel-item img {
-  max-height: 100vh !important;
-  object-fit: cover;
+  object-fit: fill;
   margin: 0 auto;
-  max-width: 80vw;
+  max-width: 100%;
 }
 .slideshow-modal .carousel-caption {
   position: relative;
   left: auto;
   right: auto;
   padding-bottom: 0px;
+  text-align: left;
 }
-.slideshow-modal .carousel-caption p {
+.slideshow-modal .carousel-caption z p {
   margin-bottom: 0px;
 }
 .slideshow-modal .carousel-control-prev {
@@ -125,17 +131,14 @@
   right: 20px;
 }
 .slideshow-modal .filmstrip {
-  margin: 0 10vw;
+  margin: 0;
   overflow: hidden;
-  height: 113px;
-  vertical-align: top;
 }
 .slideshow-modal .carousel-indicators {
-  vertical-align: top;
   position: static;
   text-align: left;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   margin: 0;
 }
 .slideshow-modal .carousel-indicators li {
