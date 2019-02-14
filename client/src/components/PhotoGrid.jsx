@@ -85,8 +85,19 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
             <h4 className="modal-title" id="save-modal-label">Save to list</h4>
           </div>
           <div className="modal-body">
-            Sign up be email <br/>
-            Already have an Airbnb account? Log in
+            <button type="button" className="btn btn-primary btn-block facebook"><i className="fab fa-facebook-f"></i>&nbsp;Continue with Facebook</button>
+            <button type="button" className="btn btn-outline-primary btn-block google"><img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" alt="Google logo" height="18px" width="18px"/>&nbsp;Continue in Google</button>
+            <div className="or-wrapper container-fluid">
+              <div className="col-5">
+                <div className="row border-bottom"></div>
+                <div className="row"></div>
+              </div>
+              <div className="col-2 or">or</div>
+              <div className="col-5">
+                <div className="row border-bottom"></div>
+                <div className="row"></div>
+              </div>
+            </div>
           </div>
           <div className="modal-footer">
           </div>

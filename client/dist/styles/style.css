@@ -1,6 +1,6 @@
 .photogrid div {
   background-color: black;
-  border: 2px solid dimgrey;
+  border: 2px solid dimgray;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -103,6 +103,40 @@
 }
 #share-modal .border-bottom, #save-modal .border-bottom {
   padding: 20px 0px;
+}
+
+#save-modal .facebook {
+  background-color: #4361b7;
+}
+#save-modal .facebook i {
+  color: white !important;
+}
+#save-modal .google {
+  border: 2px solid dimgray;
+  color: black;
+  margin-bottom: 20px;
+}
+#save-modal .google:hover {
+  background-color: white;
+}
+#save-modal .or-wrapper {
+  display: flex;
+}
+#save-modal .or-wrapper div {
+  padding: 0;
+}
+#save-modal .or-wrapper .row {
+  height: 50%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#save-modal .or-wrapper .or {
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+#save-modal .modal-footer {
+  border: none;
 }
 
 .slideshow-modal .modal-full {

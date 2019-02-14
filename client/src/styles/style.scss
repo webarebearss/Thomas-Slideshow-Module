@@ -3,7 +3,7 @@
 .photogrid {
   div {
     background-color: black;
-    border: 2px solid dimgrey;
+    border: 2px solid dimgray;
     cursor: pointer;
     justify-content: center;
     align-items: center;
@@ -127,6 +127,46 @@ $btn-margin: 25px;
 
   .border-bottom {
     padding: 20px 0px;
+  }
+}
+
+// Save modal {
+#save-modal {
+  .facebook {
+    background-color: #4361b7;
+    i {
+      color: white !important;
+    }
+  }
+  
+  .google {
+    border: 2px solid dimgray;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .google:hover {
+    background-color: white;
+  }
+  
+  .or-wrapper {
+    display: flex;
+    div {
+      padding: 0;
+    }
+    .row {
+      height: 50%;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .or {
+      margin: auto;
+      padding: 0;
+      text-align: center;
+    }
+  }
+  .modal-footer {
+    border: none;
   }
 }
 
