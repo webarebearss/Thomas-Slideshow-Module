@@ -64,10 +64,23 @@ class App extends React.Component {
     let activeThumb = document.querySelectorAll('.active')[1];
     activeThumb.scrollIntoView({behavior: "smooth", inline: "center"});
   }
+
+  copyUrl() {
+    let dummy = document.createElement('input'),
+    text = window.location.href,
+    modal = document.querySelector('.modal-body');
+    
+    modal.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    modal.removeChild(dummy);
+    document.querySelector('.copy-link').innerHTML = '&nbsp;Link Copied';
+  }
  
   renderImgGrid() {
     if (this.state.images) {
-      return (<PhotoGrid images={this.state.images} selectActivePhoto={this.selectActivePhoto} scrollToActive={this.scrollToActive}/>)
+      return (<PhotoGrid images={this.state.images} selectActivePhoto={this.selectActivePhoto} scrollToActive={this.scrollToActive} copyUrl={this.copyUrl}/>)
     }
   };
 

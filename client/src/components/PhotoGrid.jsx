@@ -2,7 +2,7 @@ import React from 'react';
 import SlideshowImg from './SlideshowImg.jsx';
 import SlideshowThumb from './SlideshowThumb.jsx';
 
-const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
+const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
   <div className="img-grid container-fluid">
     {/* {--BUTTONS--} */}
     {/* {Share} */}
@@ -64,10 +64,10 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
           </div>
           <div className="modal-body">
             <div className="border-bottom">
-            <a href={`mailto:?subject=Check out this listing on Bearbnb!&body=Check out this listing on Bearbnb! ${window.location.href}`}><i class="far fa-envelope"></i><span class="btn-link">&nbsp;Email</span></a>
+             <a href={`mailto:?subject=Check out this listing on Bearbnb!&body=Check out this listing on Bearbnb! ${window.location.href}`}><i className="far fa-envelope"></i><span className="btn-link">&nbsp;Email</span></a>
             </div>
             <div className="border-bottom">
-              <p>[Copy Link]</p>
+             <a href="#" onClick={() => {copyUrl(); return false}}><i className="far fa-copy"></i><span className="btn-link copy-link">&nbsp;Copy Link</span></a>
             </div>
           </div>
         </div>
