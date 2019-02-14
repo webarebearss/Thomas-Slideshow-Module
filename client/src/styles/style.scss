@@ -1,6 +1,6 @@
 // PHOTO GRID IMAGES
 
-.main {
+.photogrid {
   div {
     background-color: black;
     border: 2px solid dimgrey;
@@ -24,7 +24,7 @@
   }
 }
 
-.main:hover {
+.photogrid:hover {
   img {
     opacity: 0.68;
   }
@@ -42,35 +42,37 @@
   color: white !important;
 }
 
+$btn-margin: 25px;
+
 .share-btn {
   @include position-btn();
-  top: 25px;
+  top: $btn-margin;
   right: 140px;
 }
 
 .save-btn {
   @include position-btn();
-  top: 25px;
+  top: $btn-margin;
   right: 25px;
 }
 
 .share-btn-xs {
   @include position-btn();
   @include clear-btn();
-  top: 25px;
+  top: $btn-margin;
   right: 70px;
 }
 
 .save-btn-xs {
   @include position-btn();
   @include clear-btn();
-  top: 25px;
-  right: 25px;
+  top: $btn-margin;
+  right: $btn-margin;
 }
 
 .view-photo-btn {
   @include position-btn();
-  right: 25px;
+  right: $btn-margin;
 }
 
 // MODAL
@@ -80,7 +82,6 @@
   .modal-full {
     width: 100%;
     left: 0;
-    margin-left: 0;
     top: 0;
     margin: 0;
     height: 100%;
@@ -194,7 +195,6 @@
     display: block;
     margin: 0;
 
-
     li {
       background-color: #262626;
       display: inline-block;
@@ -214,10 +214,6 @@
           opacity: 1 !important;
         }
       }
-
     }
-
   }
-
-
 }

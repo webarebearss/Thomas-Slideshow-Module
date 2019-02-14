@@ -27,9 +27,9 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
     </button>
 
     {/* {--PHOTOS--} */}
-    <div className="main row h-100">
+    <div className="photogrid row h-100">
       {/* {Main image} */}
-      <div className="col"><img id="image1" className="main-img" src={images[0].imgUrl} onClick={() => selectActivePhoto()} height="600" width="800"/></div> 
+      <div className="col"><img id="image1" src={images[0].imgUrl} onClick={() => selectActivePhoto()}/></div> 
       {/* {Subimages for sizes sm and up} */}
       <div className="col-sm-4 col-lg-3 border-left-0 d-none d-sm-block">
         <div className="row h-50 border-top-0 border-bottom-0 border-left-0">
@@ -133,17 +133,14 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
                   <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
                     <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
                   </li>
-                  {images.slice(1).map((image, i) => <SlideshowThumb image={image} key={i}/>)}
+                  {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder}/>)}
                 </ol>
               </div>
-
             </div>
-
           </div>
         </div>
       </div>
     </div>
-
   </div>
 )
 
