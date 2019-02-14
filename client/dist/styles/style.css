@@ -167,7 +167,7 @@
   font-weight: 200;
   text-shadow: none;
   outline: none;
-  margin-top: auto;
+  margin-right: 10px;
 }
 .slideshow-modal .modal-content {
   background-color: #262626;
@@ -181,6 +181,7 @@
 }
 .slideshow-modal .modal-header {
   height: 87px;
+  padding: 0;
   border: none;
 }
 .slideshow-modal .modal-body {
@@ -193,8 +194,7 @@
   min-height: 100%;
 }
 .slideshow-modal .image-arrow-wrapper {
-  width: 80vw;
-  max-width: 576px;
+  max-width: 90vh;
   margin: auto;
   overflow: hidden;
 }
@@ -206,7 +206,7 @@
 .slideshow-modal .carousel-item img {
   object-fit: fill;
   margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
 }
 .slideshow-modal .carousel-caption {
   position: relative;
@@ -234,8 +234,7 @@
   }
 }
 .slideshow-modal .filmstrip {
-  width: 80vw;
-  max-width: 576px;
+  max-width: 90vh;
   margin: auto;
   overflow: hidden;
 }

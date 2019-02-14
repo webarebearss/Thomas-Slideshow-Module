@@ -201,7 +201,7 @@ $btn-margin: 25px;
     font-weight: 200;
     text-shadow: none;
     outline: none;
-    margin-top: auto;
+    margin-right: 10px;
   }
 
   .modal-content {
@@ -218,6 +218,7 @@ $btn-margin: 25px;
 
   .modal-header {
     height: 87px;
+    padding: 0;
     border: none;
   }
 
@@ -231,8 +232,7 @@ $btn-margin: 25px;
 
   // Slideshow carousel
   @mixin masking-div() {
-    width: 80vw;
-    max-width: 576px;
+    max-width: 90vh;
     margin: auto;
     overflow: hidden;
   }
@@ -255,7 +255,7 @@ $btn-margin: 25px;
     img {
       object-fit: fill;
       margin: 0 auto;
-      max-width: 100%;
+      width: 100%;
     }
   }
 
