@@ -2,7 +2,7 @@ import React from 'react';
 import SlideshowImg from './SlideshowImg.jsx';
 import SlideshowThumb from './SlideshowThumb.jsx';
 
-const PhotoGrid = ({images, scrollToActive}) => (
+const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
   <div className="img-grid container-fluid">
     {/* {--BUTTONS--} */}
     {/* {Share} */}
@@ -29,23 +29,23 @@ const PhotoGrid = ({images, scrollToActive}) => (
     {/* {--PHOTOS--} */}
     <div className="main row h-100">
       {/* {Main image} */}
-      <div className="col"><img className="main-img" src={images[0].imgUrl} height="600" width="800"/></div> 
+      <div className="col"><img id="image1" className="main-img" src={images[0].imgUrl} onClick={() => selectActivePhoto()} height="600" width="800"/></div> 
       {/* {Subimages for sizes sm and up} */}
       <div className="col-sm-4 col-lg-3 border-left-0 d-none d-sm-block">
         <div className="row h-50 border-top-0 border-bottom-0 border-left-0">
-          <img src={images[1].imgUrl}/>
+          <img id="image2" src={images[1].imgUrl} onClick={() => selectActivePhoto()}/>
         </div>
         <div className="row h-50 border-bottom-0 border-left-0">
-          <img src={images[2].imgUrl}/>
+          <img id="image3" src={images[2].imgUrl} onClick={() => selectActivePhoto()}/>
         </div>
       </div>
       {/* {Subimages for sizes lg and up} */}
       <div className="col-lg-3 border-0 d-none d-lg-block">
         <div className="row h-50 border-bottom-0">
-          <img src={images[3].imgUrl}/>
+          <img id="image4" src={images[3].imgUrl} onClick={() => selectActivePhoto()}/>
         </div>
         <div className="row h-50">
-          <img src={images[4].imgUrl}/>
+          <img id="image5" src={images[4].imgUrl} onClick={() => selectActivePhoto()}/>
         </div>
       </div>
     </div>
@@ -130,7 +130,7 @@ const PhotoGrid = ({images, scrollToActive}) => (
               {/* {Slideshow carousel indicators} */}
               <div className="filmstrip">
                 <ol className="carousel-indicators">
-                  <li data-target="#carousel-custom" data-slide-to="0" className="active">
+                  <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
                     <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
                   </li>
                   {images.slice(1).map((image, i) => <SlideshowThumb image={image} key={i}/>)}

@@ -45,7 +45,7 @@
 .share-btn {
   @include position-btn();
   top: 25px;
-  right: 125px;
+  right: 140px;
 }
 
 .save-btn {
@@ -70,6 +70,7 @@
 
 .view-photo-btn {
   @include position-btn();
+  right: 25px;
 }
 
 // MODAL
