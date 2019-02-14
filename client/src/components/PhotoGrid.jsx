@@ -2,7 +2,7 @@ import React from 'react';
 import SlideshowImg from './SlideshowImg.jsx';
 import SlideshowThumb from './SlideshowThumb.jsx';
 
-const PhotoGrid = ({images}) => (
+const PhotoGrid = ({images, scrollToActive}) => (
   <div className="img-grid container-fluid">
     {/* {--BUTTONS--} */}
     {/* {Share} */}
@@ -117,11 +117,11 @@ const PhotoGrid = ({images}) => (
                   </div>
                   {images.slice(1).map(image => <SlideshowImg image={image} key={image.imgOrder} setLength={images.length}/>)}
                   {/* {Slideshow carousel controls} */}
-                  <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev">
+                  <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev" onClick={() => scrollToActive()}>
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>
                   </a>
-                  <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next">
+                  <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next" onClick={() => scrollToActive()}>
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="sr-only">Next</span>
                   </a>

@@ -46,11 +46,14 @@ class App extends React.Component {
     );
   }
 
-  
+  scrollToActive() {
+    let activeThumb = document.querySelectorAll('.active')[1];
+    activeThumb.scrollIntoView({behavior: "smooth", inline: "center"});
+  }
  
   renderImgGrid() {
     if (this.state.images) {
-      return (<PhotoGrid images={this.state.images}/>)
+      return (<PhotoGrid images={this.state.images} scrollToActive={this.scrollToActive}/>)
     }
   };
 
