@@ -85,6 +85,22 @@
   outline: none;
 }
 #share-modal .modal-body, #save-modal .modal-body {
+  padding: 0;
+}
+#share-modal .modal-body p, #save-modal .modal-body p {
+  margin: 0;
+}
+#share-modal .modal-body i, #save-modal .modal-body i {
+  color: dimgray;
+}
+#share-modal .modal-body .btn-link, #save-modal .modal-body .btn-link {
+  color: darkcyan;
+}
+#share-modal .modal-body a, #save-modal .modal-body a {
+  font-size: 1.2rem;
+  color: inherit;
+}
+#share-modal .border-bottom, #save-modal .border-bottom {
   padding: 20px 0px;
 }
 

@@ -108,6 +108,23 @@ $btn-margin: 25px;
   }
 
   .modal-body {
+    padding: 0;
+    p {
+      margin: 0;
+    }
+    i {
+      color: dimgray;
+    }
+    .btn-link {
+      color: darkcyan; 
+    }
+    a {
+      font-size: 1.2rem;
+      color: inherit;
+    }
+  }
+
+  .border-bottom {
     padding: 20px 0px;
   }
 }

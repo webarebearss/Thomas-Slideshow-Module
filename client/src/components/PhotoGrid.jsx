@@ -59,14 +59,16 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
               <div aria-hidden="true">&times;</div>
             </button>
-            <h5 className="modal-title" id="share-modal-label">Share</h5>
+            <h4 className="modal-title" id="share-modal-label">Share</h4>
             <p>Check out this awesome listing on Bearbnb: [listing name] </p>
           </div>
           <div className="modal-body">
             <div className="border-bottom">
+            <a href={`mailto:?subject=Check out this listing on Bearbnb!&body=Check out this listing on Bearbnb! ${window.location.href}`}><i class="far fa-envelope"></i><span class="btn-link">&nbsp;Email</span></a>
+            </div>
+            <div className="border-bottom">
               <p>[Copy Link]</p>
             </div>
-
           </div>
         </div>
       </div>
@@ -80,7 +82,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive}) => (
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h5 className="modal-title" id="save-modal-label">Save to list</h5>
+            <h4 className="modal-title" id="save-modal-label">Save to list</h4>
           </div>
           <div className="modal-body">
             Sign up be email <br/>
