@@ -35,7 +35,6 @@ class App extends React.Component {
     document.styleSheets[2].insertRule(
       `.view-photo-btn {
         top: ${ screen.height * 0.4 - 60 }px;
-        right: 20px;
       }`, 2
     );
     document.styleSheets[2].insertRule(
