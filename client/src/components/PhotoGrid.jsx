@@ -102,7 +102,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
                 <div className="row"></div>
               </div>
             </div>
-            <button type="button" className="btn btn-primary btn-block email-signup"><i class="far fa-envelope"></i>&nbsp;Sign up with Email</button>
+            <button type="button" className="btn btn-primary btn-block email-signup"><i className="far fa-envelope"></i>&nbsp;Sign up with Email</button>
           </div>
           <div className="bottom-border"></div>
           <p>Already have a Bearbnb account?&nbsp;<strong>Log in</strong></p>
@@ -147,7 +147,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               <div className="caption-filmstrip-wrapper">
                   <div className="caption-hide-wrapper">
                     <div className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</div>
-                    <div className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list<i class="fas fa-sort-down"></i></div>
+                    <div className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list<i className="fas fa-sort-down"></i></div>
                   </div>
                   <div className="filmstrip">
                     <ol className="carousel-indicators">

@@ -7,11 +7,6 @@ class SearchModule extends React.Component {
       search: null
     }
   }
- 
-  componentDidMount() { 
-    console.log('mounted!')
-  };
-
   
   render() {
     return (
@@ -29,13 +24,13 @@ class SearchModule extends React.Component {
         </ul>
         <ul className="nav-links nav justify-content-end">
           <li className="nav-item">
-            <a className="nav-link active" href="#">Become a host</a>
+            <a className="nav-link" href="#">Become a host</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href="#">Help</a>
+            <a className="nav-link" href="#">Help</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href="#">Sign up</a>
+            <a className="nav-link" href="#">Sign up</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Log in</a>
