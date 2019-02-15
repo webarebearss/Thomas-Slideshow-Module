@@ -33,13 +33,13 @@ class PhotoModule extends React.Component {
     );
     document.styleSheets[2].insertRule(
       `.view-photo-btn {
-        top: ${ screen.height * 0.4 - 60 }px;
+        top: ${ screen.height * 0.4 + 16}px;
       }`, 2
     );
     document.styleSheets[2].insertRule(
       `@media screen and (min-width: 960px) {
         .view-photo-btn {
-          top: ${screen.height * 0.5 - 60}px;
+          top: ${screen.height * 0.5 + 16}px;
         }
       }`, 3
     );
