@@ -65,6 +65,13 @@ class App extends React.Component {
     activeThumb.scrollIntoView({behavior: "smooth", inline: "center"});
   }
 
+  setCaption() {
+    var activePhoto = document.querySelectorAll('.active')[1];
+    let invisibleCaption = activePhoto.querySelector('.invisible-caption').innerText;
+    let caption = document.querySelector('.img-caption');
+    caption.innerText = invisibleCaption;
+  }
+
   copyUrl() {
     let dummy = document.createElement('input'),
     text = window.location.href,
@@ -80,7 +87,7 @@ class App extends React.Component {
  
   renderImgGrid() {
     if (this.state.images) {
-      return (<PhotoGrid images={this.state.images} selectActivePhoto={this.selectActivePhoto} scrollToActive={this.scrollToActive} copyUrl={this.copyUrl}/>)
+      return (<PhotoGrid images={this.state.images} selectActivePhoto={this.selectActivePhoto} scrollToActive={this.scrollToActive} setCaption={this.setCaption} copyUrl={this.copyUrl}/>)
     }
   };
 

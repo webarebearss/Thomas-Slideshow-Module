@@ -233,15 +233,25 @@
     width: 50px;
   }
 }
+.slideshow-modal .caption-filmstrip-wrapper {
+  max-width: 90vh;
+  margin: auto;
+  overflow: hidden;
+}
+.slideshow-modal .caption-filmstrip-wrapper p {
+  width: 80%;
+  height: 2em;
+  font-size: 0.75em;
+  margin-bottom: 0px;
+  color: white;
+}
 .slideshow-modal .filmstrip {
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
 }
-.slideshow-modal .filmstrip p {
-  font-size: 0.75em;
-  margin-bottom: 0px;
-  color: white;
+.slideshow-modal .filmstrip .invisible-caption {
+  display: none !important;
 }
 @media screen and (max-width: 576px) {
   .slideshow-modal .filmstrip {

@@ -288,12 +288,21 @@ $btn-margin: 25px;
     }
   }
 
-  .filmstrip {
-    @include masking-div();
+  .caption-filmstrip-wrapper {
+    @include masking-div();    
     p {
+      width: 80%;
+      height: 2em;
       font-size: 0.75em;
       margin-bottom: 0px;
       color: white;
+    }
+  }
+
+  .filmstrip {
+    @include masking-div();
+    .invisible-caption {
+      display: none !important;
     }
   }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import SlideshowImg from './SlideshowImg.jsx';
 import SlideshowThumb from './SlideshowThumb.jsx';
 
-const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
+const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyUrl}) => (
   <div className="img-grid container-fluid">
     {/* {--BUTTONS--} */}
     {/* {Share} */}
@@ -126,31 +126,31 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
                 <div className="image-arrow-wrapper">
                   <div className="carousel-item active">
                     <img className="d-block" src={images[0].imgUrl} alt={images[0].description}/>
-                    <div className="carousel-caption">
-                      <p>{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
-                    </div>
                   </div>
                   {images.slice(1).map(image => <SlideshowImg image={image} key={image.imgOrder} setLength={images.length}/>)}
                   {/* {Slideshow carousel controls} */}
-                  <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev" onClick={() => scrollToActive()}>
+                  <a className="carousel-control-prev" href="#carousel-custom" role="button" data-slide="prev" onClick={() => {scrollToActive(); setCaption()}}>
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>
                   </a>
-                  <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next" onClick={() => scrollToActive()}>
+                  <a className="carousel-control-next" href="#carousel-custom" role="button" data-slide="next" onClick={() => {scrollToActive(); setCaption()}}>
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="sr-only">Next</span>
                   </a>
                 </div> 
               </div>
               {/* {Slideshow carousel indicators} */}
-              <div className="filmstrip">
+              <div className="caption-filmstrip-wrapper">
                 <p className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
-                <ol className="carousel-indicators">
-                  <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
-                    <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
-                  </li>
-                  {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder}/>)}
-                </ol>
+                <div className="filmstrip">
+                  <ol className="carousel-indicators">
+                    <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
+                      <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
+                      <p className="invisible-caption" hidden>{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
+                    </li>
+                    {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder} setLength={images.length}/>)}
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
