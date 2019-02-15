@@ -4,6 +4,7 @@ import SlideshowThumb from './SlideshowThumb.jsx';
 
 const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyUrl, hideFilmstrip}) => (
   <div className="img-grid container-fluid">
+  
     {/* {--BUTTONS--} */}
     {/* {Share} */}
     <button type="button" className="share-btn btn btn-light d-none d-sm-block" data-toggle="modal" data-target="#share-modal">

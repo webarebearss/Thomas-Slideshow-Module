@@ -115,7 +115,7 @@ class App extends React.Component {
         setCaption={this.setCaption} 
         copyUrl={this.copyUrl}
         hideFilmstrip={this.hideFilmstrip}
-        />)
+      />)
     }
   };
 

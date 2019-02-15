@@ -272,14 +272,14 @@
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
-  height: 87px;
-  position: absolute;
-  bottom: 0;
   -webkit-transition: height 0.25s linear;
   -moz-transition: height 0.25s linear;
   -ms-transition: height 0.25s linear;
   -o-transition: height 0.25s linear;
   transition: height 0.25s linear;
+  height: 87px;
+  position: absolute;
+  bottom: 0;
 }
 .slideshow-modal .filmstrip .invisible-caption {
   display: none !important;
@@ -290,12 +290,12 @@
   }
 }
 .slideshow-modal .hidden-filmstrip {
-  height: 0px;
   -webkit-transition: height 0.25s linear;
   -moz-transition: height 0.25s linear;
   -ms-transition: height 0.25s linear;
   -o-transition: height 0.25s linear;
   transition: height 0.25s linear;
+  height: 0px;
 }
 .slideshow-modal .carousel-indicators {
   position: static;
