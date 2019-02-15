@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PhotoGrid from './PhotoGrid.jsx';
 
 class PhotoModule extends React.Component {
@@ -9,7 +8,7 @@ class PhotoModule extends React.Component {
       images: null
     };
   }
-
+ 
 // Seed currently contains listingIds from 1-100 - make sure to use valid endpoint (e.g. "http://localhost:3000/rooms/3/").
   componentDidMount() { 
     let listingId = window.location.pathname.split('/')[2];
