@@ -313,6 +313,14 @@
   cursor: pointer;
   vertical-align: top;
 }
+@media screen and (max-width: 576px) {
+  .slideshow-modal .caption-filmstrip-wrapper .img-caption {
+    width: 100%;
+  }
+  .slideshow-modal .caption-filmstrip-wrapper .hide-filmstrip-btn {
+    display: none;
+  }
+}
 .slideshow-modal .caption-hide-wrapper {
   width: 100%;
   bottom: 70px;

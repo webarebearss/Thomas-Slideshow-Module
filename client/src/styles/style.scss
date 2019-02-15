@@ -369,6 +369,14 @@ $btn-margin: 106px;
       cursor: pointer;
       vertical-align: top;
     }
+    @media screen and (max-width: 576px) {
+      .img-caption {
+        width: 100%;
+      }
+      .hide-filmstrip-btn {
+        display: none;
+      }
+    }
   }
 
   .caption-hide-wrapper {
