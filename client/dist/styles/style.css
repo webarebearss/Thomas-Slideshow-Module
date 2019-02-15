@@ -238,6 +238,11 @@
   margin: auto;
   overflow: hidden;
 }
+.slideshow-modal .filmstrip p {
+  font-size: 0.75em;
+  margin-bottom: 0px;
+  color: white;
+}
 @media screen and (max-width: 576px) {
   .slideshow-modal .filmstrip {
     width: 100vw !important;

@@ -69,7 +69,7 @@ class App extends React.Component {
     let dummy = document.createElement('input'),
     text = window.location.href,
     modal = document.querySelector('.modal-body');
-    
+  
     modal.appendChild(dummy);
     dummy.value = text;
     dummy.select();

@@ -144,6 +144,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, copyUrl}) => (
               </div>
               {/* {Slideshow carousel indicators} */}
               <div className="filmstrip">
+                <p className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
                 <ol className="carousel-indicators">
                   <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
                     <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
