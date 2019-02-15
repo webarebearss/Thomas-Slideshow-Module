@@ -141,7 +141,8 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               </div>
               {/* {Slideshow carousel indicators} */}
               <div className="caption-filmstrip-wrapper">
-                <p className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
+                <span className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</span>
+                <span className="hide-filmstrip">Hide photo list</span>
                 <div className="filmstrip">
                   <ol className="carousel-indicators">
                     <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">

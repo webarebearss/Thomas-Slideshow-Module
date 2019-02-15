@@ -238,17 +238,28 @@
   margin: auto;
   overflow: hidden;
 }
-.slideshow-modal .caption-filmstrip-wrapper p {
+.slideshow-modal .caption-filmstrip-wrapper .img-caption {
   width: 80%;
   height: 2em;
   font-size: 0.75em;
   margin-bottom: 0px;
   color: white;
+  display: inline-block;
+}
+.slideshow-modal .caption-filmstrip-wrapper .hide-filmstrip {
+  width: 20%;
+  height: 2em;
+  font-size: 0.75em;
+  margin: auto;
+  color: white;
+  display: inline-block;
+  text-align: right;
 }
 .slideshow-modal .filmstrip {
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
+  transition: ease-in-out;
 }
 .slideshow-modal .filmstrip .invisible-caption {
   display: none !important;

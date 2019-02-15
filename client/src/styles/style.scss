@@ -290,17 +290,28 @@ $btn-margin: 25px;
 
   .caption-filmstrip-wrapper {
     @include masking-div();    
-    p {
+    .img-caption {
       width: 80%;
       height: 2em;
       font-size: 0.75em;
       margin-bottom: 0px;
       color: white;
+      display: inline-block;
+    }
+    .hide-filmstrip {
+      width: 20%;
+      height: 2em;
+      font-size: 0.75em;
+      margin: auto;
+      color: white;
+      display: inline-block;
+      text-align: right;
     }
   }
 
   .filmstrip {
     @include masking-div();
+    transition: ease-in-out;
     .invisible-caption {
       display: none !important;
     }

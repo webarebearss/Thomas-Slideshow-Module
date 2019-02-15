@@ -60,6 +60,7 @@ class App extends React.Component {
       image4: 3,
       image5: 4
     }
+
     photos[gridMap[event.path[0].id]].classList.add('active');
     thumbnails[gridMap[event.path[0].id]].classList.add('active');
     document.querySelector('.view-photo-btn').click();
@@ -105,6 +106,6 @@ class App extends React.Component {
   };
 }
 
-ReactDOM.render(<App />, document.querySelector('#photogrid'));
+ReactDOM.render(<App/>, document.querySelector('#photogrid'));
 
 export default App;
