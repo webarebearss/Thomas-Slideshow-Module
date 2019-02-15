@@ -61,7 +61,8 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               <div aria-hidden="true">&times;</div>
             </button>
             <h4 className="modal-title" id="share-modal-label">Share</h4>
-            <p>Check out this awesome listing on Bearbnb: [listing name] </p>
+            <p>Check out this awesome listing on Bearbnb:</p>
+            <p>Log Cabin in the Woods - Habitats for rent in Montana.</p>
           </div>
           <div className="modal-body">
             <div className="border-bottom">

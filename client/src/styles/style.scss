@@ -2,15 +2,15 @@
 .navbar {
   height: 81px;
   img {
-    position: absolute;
-    margin-left: 5px;
-    margin-right: 30px;
+    margin: 6px 30px auto 5px;
+  }
+  a {
+    color: slategray;
+    font-weight: 600;
   }
 }
 
 .search-form {
-  position: absolute;
-  left: 100px;
   width: 460px;
   height: 48px;
   -webkit-box-shadow: -1px 2px 20px -6px rgba(0,0,0,0.44);
@@ -37,15 +37,15 @@
   }
 }
 
-@media (min-width: 576) {
-  .search-form {
-    max-width: auto;
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
   }
 }
 
-@media (min-width: 1128px) {
+@media (max-width: 576px) {
   .search-form {
-    left: 80px !important;
+    width: auto;
   }
 }
 
