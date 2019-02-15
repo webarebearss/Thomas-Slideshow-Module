@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PhotoGrid from './components/PhotoGrid.jsx';
+import PhotoGrid from './PhotoGrid.jsx';
 
-class App extends React.Component {
+class PhotoModule extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -128,6 +128,4 @@ class App extends React.Component {
   };
 }
 
-ReactDOM.render(<App/>, document.querySelector('#photogrid'));
-
-export default App;
+export default PhotoModule;
