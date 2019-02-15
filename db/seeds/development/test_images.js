@@ -1,23 +1,30 @@
 const faker = require('faker');
 
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex) {
   return knex('images').del()
     .then(function () {
-      return knex('images').insert(sampleImgSet());
+      return knex('images').insert(sampleImgSet(100));
     });
 };
 
-function sampleImgSet() {
+function sampleImgSet(numOfListings) {
   let imgArr = [];
-  for (let i = 0; i < 18; i++) {
-    imgArr.push(
-      {
-        imgUrl: faker.image.image(),
-        listingId: 1000,
-        imgOrder: i,
-        description: faker.random.words()
-      }
-    )
+  let listingId = 1;
+  function randomImgQuantity() {
+    return 6 + Math.floor(25 * Math.random())
+  }
+  while (listingId <= numOfListings) {
+    for (let i = 0; i < randomImgQuantity(); i++) {
+      imgArr.push(
+        {
+          imgUrl: faker.image.image(),
+          listingId,
+          imgOrder: i,
+          description: faker.fake("{{random.words}}, {{random.words}}, {{random.words}}")
+        }
+      )
+    }
+    listingId++;
   }
   return imgArr;
 }

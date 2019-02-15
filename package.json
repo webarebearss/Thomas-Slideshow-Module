@@ -28,7 +28,7 @@
   "scripts": {
     "start": "nodemon",
     "build-sass": "sass --watch ./client/src/styles/:./client/dist/styles/",
-    "build-webpack": "webpack --mode production --watch",
+    "build-webpack": "webpack --mode development --watch",
     "test": "jest --forceExit",
     "seed": "knex seed:run"
   },
