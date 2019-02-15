@@ -72,7 +72,7 @@ class App extends React.Component {
   }
 
   setCaption() {
-    var activePhoto = document.querySelectorAll('.active')[1];
+    let activePhoto = document.querySelectorAll('.active')[1];
     let invisibleCaption = activePhoto.querySelector('.invisible-caption').innerText;
     let caption = document.querySelector('.img-caption');
     caption.innerText = invisibleCaption;
@@ -90,10 +90,23 @@ class App extends React.Component {
     modal.removeChild(dummy);
     document.querySelector('.copy-link').innerHTML = '&nbsp;Link Copied';
   }
+
+  hideFilmstrip() {
+    const filmstrip = document.querySelector('.filmstrip');
+    filmstrip.classList.toggle('hidden-filmstrip');
+  }
  
   renderImgGrid() {
     if (this.state.images) {
-      return (<PhotoGrid images={this.state.images} selectActivePhoto={this.selectActivePhoto} scrollToActive={this.scrollToActive} setCaption={this.setCaption} copyUrl={this.copyUrl}/>)
+      return (<
+        PhotoGrid 
+        images={this.state.images} 
+        selectActivePhoto={this.selectActivePhoto} 
+        scrollToActive={this.scrollToActive} 
+        setCaption={this.setCaption} 
+        copyUrl={this.copyUrl}
+        hideFilmstrip={this.hideFilmstrip}
+        />)
     }
   };
 

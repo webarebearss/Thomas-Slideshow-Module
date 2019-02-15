@@ -298,7 +298,7 @@ $btn-margin: 25px;
       color: white;
       display: inline-block;
     }
-    .hide-filmstrip {
+    .hide-filmstrip-btn {
       width: 20%;
       height: 2em;
       font-size: 0.75em;
@@ -306,6 +306,7 @@ $btn-margin: 25px;
       color: white;
       display: inline-block;
       text-align: right;
+      cursor: pointer;
     }
   }
 
@@ -321,6 +322,10 @@ $btn-margin: 25px;
     .filmstrip {
       width: 100vw !important;
     }
+  }
+
+  .hidden-filmstrip {
+    height: 0px;
   }
 
   .carousel-indicators {

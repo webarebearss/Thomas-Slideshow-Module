@@ -246,7 +246,7 @@
   color: white;
   display: inline-block;
 }
-.slideshow-modal .caption-filmstrip-wrapper .hide-filmstrip {
+.slideshow-modal .caption-filmstrip-wrapper .hide-filmstrip-btn {
   width: 20%;
   height: 2em;
   font-size: 0.75em;
@@ -254,6 +254,7 @@
   color: white;
   display: inline-block;
   text-align: right;
+  cursor: pointer;
 }
 .slideshow-modal .filmstrip {
   max-width: 90vh;
@@ -268,6 +269,9 @@
   .slideshow-modal .filmstrip {
     width: 100vw !important;
   }
+}
+.slideshow-modal .hidden-filmstrip {
+  height: 0px;
 }
 .slideshow-modal .carousel-indicators {
   position: static;
