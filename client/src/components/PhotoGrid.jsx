@@ -29,23 +29,23 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
     {/* {--PHOTOS--} */}
     <div className="photogrid row h-100">
       {/* {Main image} */}
-      <div className="col"><img id="image1" src={images[0].imgUrl} onClick={() => selectActivePhoto()}/></div> 
+      <div className="col"><img id="image1" src={images[0].imgUrl} onClick={() => {selectActivePhoto(); setCaption()}}/></div> 
       {/* {Subimages for sizes sm and up} */}
       <div className="col-sm-4 col-lg-3 border-left-0 d-none d-sm-block">
         <div className="row h-50 border-top-0 border-bottom-0 border-left-0">
-          <img id="image2" src={images[1].imgUrl} onClick={() => selectActivePhoto()}/>
+          <img id="image2" src={images[1].imgUrl} onClick={() => {selectActivePhoto(); setCaption()}}/>
         </div>
         <div className="row h-50 border-bottom-0 border-left-0">
-          <img id="image3" src={images[2].imgUrl} onClick={() => selectActivePhoto()}/>
+          <img id="image3" src={images[2].imgUrl} onClick={() => {selectActivePhoto(); setCaption()}}/>
         </div>
       </div>
       {/* {Subimages for sizes lg and up} */}
       <div className="col-lg-3 border-0 d-none d-lg-block">
         <div className="row h-50 border-bottom-0">
-          <img id="image4" src={images[3].imgUrl} onClick={() => selectActivePhoto()}/>
+          <img id="image4" src={images[3].imgUrl} onClick={() => {selectActivePhoto(); setCaption()}}/>
         </div>
         <div className="row h-50">
-          <img id="image5" src={images[4].imgUrl} onClick={() => selectActivePhoto()}/>
+          <img id="image5" src={images[4].imgUrl} onClick={() => {selectActivePhoto(); setCaption()}}/>
         </div>
       </div>
     </div>
@@ -145,10 +145,10 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
                 <div className="filmstrip">
                   <ol className="carousel-indicators">
                     <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
-                      <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive"/>
+                      <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive" onClick={() => setCaption()}/>
                       <p className="invisible-caption" hidden>{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
                     </li>
-                    {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder} setLength={images.length}/>)}
+                    {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder} setLength={images.length} setCaption={setCaption}/>)}
                   </ol>
                 </div>
               </div>

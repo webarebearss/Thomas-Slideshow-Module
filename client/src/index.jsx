@@ -47,8 +47,12 @@ class App extends React.Component {
   }
 
   selectActivePhoto() {
-    let photos = document.querySelectorAll('.carousel-item');
+    let photos = document.querySelectorAll('.carousel-item'),
+    thumbnails = document.querySelectorAll('.thumbnail');
+
     photos.forEach(photo => photo.classList.remove('active'));
+    thumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
+
     const gridMap = {
       image1: 0,
       image2: 1,
@@ -57,6 +61,7 @@ class App extends React.Component {
       image5: 4
     }
     photos[gridMap[event.path[0].id]].classList.add('active');
+    thumbnails[gridMap[event.path[0].id]].classList.add('active');
     document.querySelector('.view-photo-btn').click();
   }
 
