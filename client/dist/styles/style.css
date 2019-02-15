@@ -1,4 +1,4 @@
-.main div {
+.photogrid div {
   background-color: black;
   border: 2px solid dimgrey;
   cursor: pointer;
@@ -7,18 +7,18 @@
   overflow: hidden;
   padding: 0px;
 }
-.main div img {
+.photogrid div img {
   min-height: 100% !important;
   width: 100%;
   object-fit: cover;
   transition: all 0.45s ease 0s;
 }
-.main div img:hover {
+.photogrid div img:hover {
   transform: scale(1.08);
   opacity: 1 !important;
 }
 
-.main:hover img {
+.photogrid:hover img {
   opacity: 0.68;
 }
 
@@ -26,7 +26,7 @@
   z-index: 3;
   position: absolute;
   top: 25px;
-  right: 125px;
+  right: 140px;
 }
 
 .save-btn {
@@ -57,12 +57,12 @@
 .view-photo-btn {
   z-index: 3;
   position: absolute;
+  right: 25px;
 }
 
 .slideshow-modal .modal-full {
   width: 100%;
   left: 0;
-  margin-left: 0;
   top: 0;
   margin: 0;
   height: 100%;
@@ -72,6 +72,7 @@
   font-size: 4rem;
   font-weight: 200;
   text-shadow: none;
+  outline: none;
 }
 .slideshow-modal .modal-content {
   background-color: #262626;
@@ -96,46 +97,62 @@
 .slideshow-modal .carousel-inner {
   min-height: 100%;
 }
-.slideshow-modal .display-photo {
-  display: contents;
-  margin: auto;
+.slideshow-modal .image-arrow-wrapper {
   width: 80vw;
+  max-width: 576px;
+  margin: auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .slideshow-modal .image-arrow-wrapper {
+    width: 100vw;
+  }
 }
 .slideshow-modal .carousel-item img {
-  max-height: 100vh !important;
-  object-fit: cover;
+  object-fit: fill;
   margin: 0 auto;
-  max-width: 80vw;
+  max-width: 100%;
 }
 .slideshow-modal .carousel-caption {
   position: relative;
   left: auto;
   right: auto;
   padding-bottom: 0px;
+  text-align: left;
 }
 .slideshow-modal .carousel-caption p {
   margin-bottom: 0px;
 }
 .slideshow-modal .carousel-control-prev {
   position: absolute;
-  left: 20px;
+  left: 15px;
 }
 .slideshow-modal .carousel-control-next {
   position: absolute;
-  right: 20px;
+  right: 15px;
+}
+@media screen and (min-width: 576px) {
+  .slideshow-modal .carousel-control-prev-icon, .slideshow-modal .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+  }
 }
 .slideshow-modal .filmstrip {
-  margin: 0 10vw;
+  width: 80vw;
+  max-width: 576px;
+  margin: auto;
   overflow: hidden;
-  height: 113px;
-  vertical-align: top;
+}
+@media screen and (max-width: 576px) {
+  .slideshow-modal .filmstrip {
+    width: 100vw !important;
+  }
 }
 .slideshow-modal .carousel-indicators {
-  vertical-align: top;
   position: static;
   text-align: left;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   margin: 0;
 }
 .slideshow-modal .carousel-indicators li {

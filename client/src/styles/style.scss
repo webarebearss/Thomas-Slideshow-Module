@@ -1,6 +1,6 @@
 // PHOTO GRID IMAGES
 
-.main {
+.photogrid {
   div {
     background-color: black;
     border: 2px solid dimgrey;
@@ -24,7 +24,7 @@
   }
 }
 
-.main:hover {
+.photogrid:hover {
   img {
     opacity: 0.68;
   }
@@ -42,34 +42,37 @@
   color: white !important;
 }
 
+$btn-margin: 25px;
+
 .share-btn {
   @include position-btn();
-  top: 25px;
-  right: 125px;
+  top: $btn-margin;
+  right: 140px;
 }
 
 .save-btn {
   @include position-btn();
-  top: 25px;
+  top: $btn-margin;
   right: 25px;
 }
 
 .share-btn-xs {
   @include position-btn();
   @include clear-btn();
-  top: 25px;
+  top: $btn-margin;
   right: 70px;
 }
 
 .save-btn-xs {
   @include position-btn();
   @include clear-btn();
-  top: 25px;
-  right: 25px;
+  top: $btn-margin;
+  right: $btn-margin;
 }
 
 .view-photo-btn {
   @include position-btn();
+  right: $btn-margin;
 }
 
 // MODAL
@@ -79,7 +82,6 @@
   .modal-full {
     width: 100%;
     left: 0;
-    margin-left: 0;
     top: 0;
     margin: 0;
     height: 100%;
@@ -90,6 +92,7 @@
     font-size: 4rem;
     font-weight: 200;
     text-shadow: none;
+    outline: none;
   }
 
   .modal-content {
@@ -117,23 +120,33 @@
     border: none;
   }
 
+  // Slideshow carousel
+  @mixin masking-div() {
+    width: 80vw;
+    max-width: 576px;
+    margin: auto;
+    overflow: hidden;
+  }
+
   .carousel-inner {
     min-height: 100%;
   }
 
-  .display-photo {
-    display: contents;
-    margin: auto;
-    width: 80vw;
+  .image-arrow-wrapper {
+    @include masking-div();
+  }
+
+  @media screen and (max-width: 576px) {
+    .image-arrow-wrapper {
+      width: 100vw;
+    }
   }
   
   .carousel-item {
     img {
-      // min-height: 100% !important;
-      max-height: 100vh !important;
-      object-fit: cover;
+      object-fit: fill;
       margin: 0 auto;
-      max-width: 80vw;
+      max-width: 100%;
     }
   }
 
@@ -142,6 +155,7 @@
     left: auto;
     right: auto;
     padding-bottom: 0px;
+    text-align: left;
     p {
       margin-bottom: 0px;
     }
@@ -149,29 +163,37 @@
 
   .carousel-control-prev {
     position: absolute;
-    left: 20px;
+    left: 15px;
   }
     
   .carousel-control-next {
     position: absolute;
-    right: 20px;
+    right: 15px;
+  }
+
+  @media screen and (min-width: 576px) {
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      height: 50px;
+      width: 50px;
+    }
   }
 
   .filmstrip {
-    margin: 0 10vw;
-    overflow: hidden;
-    height: 113px;
-    vertical-align: top;
+    @include masking-div();
+  }
+
+  @media screen and (max-width: 576px) {
+    .filmstrip {
+      width: 100vw !important;
+    }
   }
 
   .carousel-indicators {
-    vertical-align: top;
     position: static;
     text-align: left;
     white-space: nowrap;
-    display: inline-block;
+    display: block;
     margin: 0;
-
 
     li {
       background-color: #262626;
@@ -192,10 +214,6 @@
           opacity: 1 !important;
         }
       }
-
     }
-
   }
-
-
 }

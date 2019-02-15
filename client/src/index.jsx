@@ -34,21 +34,40 @@ class App extends React.Component {
     document.styleSheets[2].insertRule(
       `.view-photo-btn {
         top: ${ screen.height * 0.4 - 60 }px;
-        right: 30px;
+        right: 20px;
       }`, 2
     );
     document.styleSheets[2].insertRule(
       `@media screen and (min-width: 960px) {
         .view-photo-btn {
-          top: ${ screen.height * 0.5 - 60 }px;
+          top: ${screen.height * 0.5 - 60}px;
         }
       }`, 3
     );
   }
+
+  selectActivePhoto() {
+    let photos = document.querySelectorAll('.carousel-item');
+    photos.forEach(photo => photo.classList.remove('active'));
+    const gridMap = {
+      image1: 0,
+      image2: 1,
+      image3: 2,
+      image4: 3,
+      image5: 4
+    }
+    photos[gridMap[event.path[0].id]].classList.add('active');
+    document.querySelector('.view-photo-btn').click();
+  }
+
+  scrollToActive() {
+    let activeThumb = document.querySelectorAll('.active')[1];
+    activeThumb.scrollIntoView({behavior: "smooth", inline: "center"});
+  }
  
   renderImgGrid() {
     if (this.state.images) {
-      return (<PhotoGrid images={this.state.images}/>)
+      return (<PhotoGrid images={this.state.images} selectActivePhoto={this.selectActivePhoto} scrollToActive={this.scrollToActive}/>)
     }
   };
 
