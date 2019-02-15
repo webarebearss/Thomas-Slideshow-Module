@@ -237,11 +237,13 @@
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
+  height: 120px;
 }
 .slideshow-modal .caption-filmstrip-wrapper .img-caption {
   width: 80%;
   height: 2em;
   font-size: 0.75em;
+  margin-top: auto;
   margin-bottom: 0px;
   color: white;
   display: inline-block;
@@ -256,11 +258,30 @@
   text-align: right;
   cursor: pointer;
 }
+.slideshow-modal .caption-hide-wrapper {
+  width: 100%;
+  bottom: 100px;
+  transition: margin 0.25s linear;
+}
+.slideshow-modal .caption-hide-hidden {
+  margin-top: 80px;
+  margin-bottom: 0px;
+}
+.slideshow-modal .hide-filmstrip-wrapper {
+  position: absolute;
+  bottom: 0;
+}
 .slideshow-modal .filmstrip {
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
-  transition: ease-in-out;
+  height: 100px;
+  margin: auto 0px 0px 0px;
+  -webkit-transition: height 0.25s linear;
+  -moz-transition: height 0.25s linear;
+  -ms-transition: height 0.25s linear;
+  -o-transition: height 0.25s linear;
+  transition: height 0.25s linear;
 }
 .slideshow-modal .filmstrip .invisible-caption {
   display: none !important;
@@ -272,6 +293,11 @@
 }
 .slideshow-modal .hidden-filmstrip {
   height: 0px;
+  -webkit-transition: height 0.25s linear;
+  -moz-transition: height 0.25s linear;
+  -ms-transition: height 0.25s linear;
+  -o-transition: height 0.25s linear;
+  transition: height 0.25s linear;
 }
 .slideshow-modal .carousel-indicators {
   position: static;

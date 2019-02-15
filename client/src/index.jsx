@@ -93,9 +93,11 @@ class App extends React.Component {
 
   hideFilmstrip() {
     const filmstrip = document.querySelector('.filmstrip'),
-    hideBtn = document.querySelector('.hide-filmstrip-btn');
+    hideBtn = document.querySelector('.hide-filmstrip-btn'),
+    captionHide = document.querySelector('.caption-hide-wrapper');
 
     filmstrip.classList.toggle('hidden-filmstrip');
+    captionHide.classList.toggle('caption-hide-hidden');
     if (hideBtn.innerHTML === 'Hide photo list') {
       hideBtn.innerHTML = 'Show photo list';
     } else {

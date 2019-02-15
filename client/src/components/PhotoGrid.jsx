@@ -141,16 +141,20 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               </div>
               {/* {Slideshow carousel indicators} */}
               <div className="caption-filmstrip-wrapper">
-                <span className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</span>
-                <span className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list</span>
-                <div className="filmstrip">
-                  <ol className="carousel-indicators">
-                    <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
-                      <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive" onClick={() => setCaption()}/>
-                      <p className="invisible-caption" hidden>{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
-                    </li>
-                    {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder} setLength={images.length} setCaption={setCaption}/>)}
-                  </ol>
+                <div className="hide-filmstrip-wrapper">
+                  <div className="caption-hide-wrapper">
+                    <span className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</span>
+                    <span className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list</span>
+                  </div>
+                  <div className="filmstrip">
+                    <ol className="carousel-indicators">
+                      <li data-target="#carousel-custom" data-slide-to="0" className="thumbnail active">
+                        <img src={images[0].imgUrl} alt="images[0].description" className="img-responsive" onClick={() => setCaption()}/>
+                        <p className="invisible-caption" hidden>{images[0].imgOrder + 1}/{images.length}: {images[0].description}</p>
+                      </li>
+                      {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder} setLength={images.length} setCaption={setCaption}/>)}
+                    </ol>
+                  </div>
                 </div>
               </div>
             </div>

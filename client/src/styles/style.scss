@@ -289,11 +289,13 @@ $btn-margin: 25px;
   }
 
   .caption-filmstrip-wrapper {
-    @include masking-div();    
+    @include masking-div();
+    height: 120px; 
     .img-caption {
       width: 80%;
       height: 2em;
       font-size: 0.75em;
+      margin-top: auto;
       margin-bottom: 0px;
       color: white;
       display: inline-block;
@@ -310,9 +312,31 @@ $btn-margin: 25px;
     }
   }
 
+  .caption-hide-wrapper {
+    width: 100%;
+    bottom: 100px;
+    transition: margin 0.25s linear;
+  }
+
+  .caption-hide-hidden {
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
+
+  .hide-filmstrip-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+
   .filmstrip {
     @include masking-div();
-    transition: ease-in-out;
+    height: 100px;
+    margin: auto 0px 0px 0px;
+    -webkit-transition: height 0.25s linear;
+       -moz-transition: height 0.25s linear;
+        -ms-transition: height 0.25s linear;
+         -o-transition: height 0.25s linear;
+            transition: height 0.25s linear;
     .invisible-caption {
       display: none !important;
     }
@@ -326,6 +350,11 @@ $btn-margin: 25px;
 
   .hidden-filmstrip {
     height: 0px;
+    -webkit-transition: height 0.25s linear;
+       -moz-transition: height 0.25s linear;
+        -ms-transition: height 0.25s linear;
+         -o-transition: height 0.25s linear;
+            transition: height 0.25s linear;
   }
 
   .carousel-indicators {
