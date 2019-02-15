@@ -92,8 +92,15 @@ class App extends React.Component {
   }
 
   hideFilmstrip() {
-    const filmstrip = document.querySelector('.filmstrip');
+    const filmstrip = document.querySelector('.filmstrip'),
+    hideBtn = document.querySelector('.hide-filmstrip-btn');
+
     filmstrip.classList.toggle('hidden-filmstrip');
+    if (hideBtn.innerHTML === 'Hide photo list') {
+      hideBtn.innerHTML = 'Show photo list';
+    } else {
+      hideBtn.innerHTML = 'Hide photo list';
+    }
   }
  
   renderImgGrid() {
