@@ -143,8 +143,8 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               <div className="caption-filmstrip-wrapper">
                 <div className="hide-filmstrip-wrapper">
                   <div className="caption-hide-wrapper">
-                    <span className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</span>
-                    <span className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list</span>
+                    <div className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</div>
+                    <div className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list</div>
                   </div>
                   <div className="filmstrip">
                     <ol className="carousel-indicators">

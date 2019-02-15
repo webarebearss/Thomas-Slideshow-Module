@@ -314,8 +314,9 @@ $btn-margin: 25px;
 
   .caption-hide-wrapper {
     width: 100%;
-    bottom: 100px;
+    bottom: 80px;
     transition: margin 0.25s linear;
+    position: initial !important;
   }
 
   .caption-hide-hidden {
@@ -330,7 +331,7 @@ $btn-margin: 25px;
 
   .filmstrip {
     @include masking-div();
-    height: 100px;
+    height: 87px;
     margin: auto 0px 0px 0px;
     -webkit-transition: height 0.25s linear;
        -moz-transition: height 0.25s linear;

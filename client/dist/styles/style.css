@@ -260,8 +260,9 @@
 }
 .slideshow-modal .caption-hide-wrapper {
   width: 100%;
-  bottom: 100px;
+  bottom: 80px;
   transition: margin 0.25s linear;
+  position: initial !important;
 }
 .slideshow-modal .caption-hide-hidden {
   margin-top: 80px;
@@ -275,7 +276,7 @@
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
-  height: 100px;
+  height: 87px;
   margin: auto 0px 0px 0px;
   -webkit-transition: height 0.25s linear;
   -moz-transition: height 0.25s linear;
