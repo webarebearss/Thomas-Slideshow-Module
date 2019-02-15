@@ -290,9 +290,9 @@ $btn-margin: 25px;
 
   .caption-filmstrip-wrapper {
     @include masking-div();
-    height: 120px; 
+    height: 130px; 
     .img-caption {
-      width: 80%;
+      width: 70%;
       height: 2em;
       font-size: 0.75em;
       margin-top: auto;
@@ -301,7 +301,7 @@ $btn-margin: 25px;
       display: inline-block;
     }
     .hide-filmstrip-btn {
-      width: 20%;
+      width: 30%;
       height: 2em;
       font-size: 0.75em;
       margin: auto;
@@ -314,7 +314,7 @@ $btn-margin: 25px;
 
   .caption-hide-wrapper {
     width: 100%;
-    bottom: 80px;
+    bottom: 70px;
     transition: margin 0.25s linear;
     position: initial !important;
   }
@@ -324,15 +324,11 @@ $btn-margin: 25px;
     margin-bottom: 0px;
   }
 
-  .hide-filmstrip-wrapper {
-    position: absolute;
-    bottom: 0;
-  }
-
   .filmstrip {
     @include masking-div();
     height: 87px;
-    margin: auto 0px 0px 0px;
+    position: absolute;
+    bottom: 0;
     -webkit-transition: height 0.25s linear;
        -moz-transition: height 0.25s linear;
         -ms-transition: height 0.25s linear;

@@ -141,7 +141,6 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               </div>
               {/* {Slideshow carousel indicators} */}
               <div className="caption-filmstrip-wrapper">
-                <div className="hide-filmstrip-wrapper">
                   <div className="caption-hide-wrapper">
                     <div className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</div>
                     <div className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list</div>
@@ -155,7 +154,6 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
                       {images.slice(1).map(image => <SlideshowThumb image={image} key={image.imgOrder} setLength={images.length} setCaption={setCaption}/>)}
                     </ol>
                   </div>
-                </div>
               </div>
             </div>
           </div>
