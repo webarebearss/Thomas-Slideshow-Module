@@ -290,10 +290,10 @@ $btn-margin: 25px;
 
   .caption-filmstrip-wrapper {
     @include masking-div();
-    height: 130px; 
+    height: 135px; 
     .img-caption {
       width: 70%;
-      height: 2em;
+      height: 4em;
       font-size: 0.75em;
       margin-top: auto;
       margin-bottom: 0px;

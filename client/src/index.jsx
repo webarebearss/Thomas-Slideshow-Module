@@ -98,10 +98,10 @@ class App extends React.Component {
 
     filmstrip.classList.toggle('hidden-filmstrip');
     captionHide.classList.toggle('caption-hide-hidden');
-    if (hideBtn.innerHTML === 'Hide photo list') {
-      hideBtn.innerHTML = 'Show photo list';
+    if (hideBtn.innerHTML[0] === 'H') {
+      hideBtn.innerHTML = 'Show photo list<i class="fas fa-sort-up"></i>';
     } else {
-      hideBtn.innerHTML = 'Hide photo list';
+      hideBtn.innerHTML = 'Hide photo list<i class="fas fa-sort-down"></i>';
     }
   }
  

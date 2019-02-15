@@ -70,6 +70,8 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
              <a href="#" onClick={() => {copyUrl(); return false}}><i className="far fa-copy"></i><span className="btn-link copy-link">&nbsp;Copy Link</span></a>
             </div>
           </div>
+          <div className="modal-footer">
+          </div>
         </div>
       </div>
     </div>
@@ -143,7 +145,7 @@ const PhotoGrid = ({images, selectActivePhoto, scrollToActive, setCaption, copyU
               <div className="caption-filmstrip-wrapper">
                   <div className="caption-hide-wrapper">
                     <div className="img-caption">{images[0].imgOrder + 1}/{images.length}: {images[0].description}</div>
-                    <div className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list</div>
+                    <div className="hide-filmstrip-btn" onClick={() => hideFilmstrip()}>Hide photo list<i class="fas fa-sort-down"></i></div>
                   </div>
                   <div className="filmstrip">
                     <ol className="carousel-indicators">

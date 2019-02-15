@@ -237,11 +237,11 @@
   max-width: 90vh;
   margin: auto;
   overflow: hidden;
-  height: 130px;
+  height: 135px;
 }
 .slideshow-modal .caption-filmstrip-wrapper .img-caption {
   width: 70%;
-  height: 2em;
+  height: 4em;
   font-size: 0.75em;
   margin-top: auto;
   margin-bottom: 0px;
