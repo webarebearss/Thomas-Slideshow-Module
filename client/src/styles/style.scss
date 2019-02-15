@@ -356,6 +356,7 @@ $btn-margin: 106px;
       margin-bottom: 0px;
       color: white;
       display: inline-block;
+      vertical-align: top;
     }
     .hide-filmstrip-btn {
       width: 30%;
@@ -366,6 +367,7 @@ $btn-margin: 106px;
       display: inline-block;
       text-align: right;
       cursor: pointer;
+      vertical-align: top;
     }
   }
 
@@ -392,7 +394,7 @@ $btn-margin: 106px;
   .filmstrip {
     @include masking-div();
     @include filmstrip-transition();
-    height: 87px;
+    height: 113px;
     position: absolute;
     bottom: 0;
     .invisible-caption {
