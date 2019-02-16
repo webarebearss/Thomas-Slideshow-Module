@@ -336,8 +336,9 @@
   position: initial !important;
 }
 .slideshow-modal .caption-hide-hidden {
-  margin-top: 80px;
+  margin-top: 77px;
   margin-bottom: 0px;
+  letter-spacing: normal;
 }
 .slideshow-modal .filmstrip {
   max-width: 90vh;
