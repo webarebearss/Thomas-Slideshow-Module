@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const dbutils = require('../db/dbutils');
 
-let port = 3000;
+let port = 3001;
 
 app.use('/rooms/:listingId/', express.static(__dirname + '/../client/dist'));
 

@@ -44,6 +44,12 @@
 }
 
 @media (max-width: 576px) {
+  .brand-search-wrapper {
+    width: 100%;
+  }
+  .search-wrapper {
+    width: 80%;
+  }
   .search-form {
     width: auto;
   }
@@ -356,6 +362,7 @@ $btn-margin: 106px;
       margin-bottom: 0px;
       color: white;
       display: inline-block;
+      vertical-align: top;
     }
     .hide-filmstrip-btn {
       width: 30%;
@@ -366,6 +373,15 @@ $btn-margin: 106px;
       display: inline-block;
       text-align: right;
       cursor: pointer;
+      vertical-align: top;
+    }
+    @media screen and (max-width: 576px) {
+      .img-caption {
+        width: 100%;
+      }
+      .hide-filmstrip-btn {
+        display: none;
+      }
     }
   }
 
@@ -377,8 +393,8 @@ $btn-margin: 106px;
   }
 
   .caption-hide-hidden {
-    margin-top: 80px;
-    margin-bottom: 0px;
+    margin-top: 77px;
+    margin-bottom: 0px;letter-spacing: normal;
   }
 
   @mixin filmstrip-transition() {
@@ -392,7 +408,7 @@ $btn-margin: 106px;
   .filmstrip {
     @include masking-div();
     @include filmstrip-transition();
-    height: 87px;
+    height: 113px;
     position: absolute;
     bottom: 0;
     .invisible-caption {
