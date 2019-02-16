@@ -44,6 +44,12 @@
 }
 
 @media (max-width: 576px) {
+  .brand-search-wrapper {
+    width: 100%;
+  }
+  .search-wrapper {
+    width: 80%;
+  }
   .search-form {
     width: auto;
   }

@@ -11,11 +11,11 @@ class SearchModule extends React.Component {
   render() {
     return (
       <nav className="navbar bg-white">
-        <ul className="nav justify-content-start">
+        <ul className="brand-search-wrapper nav justify-content-start">
           <li className="nav-item">
           <img src="https://i.imgur.com/sD4oWuf.png"/>
           </li>
-          <li className="nav-item">
+          <li className="search-wrapper nav-item">
             <div className="search-form">
               <i className="fas fa-search align-middle"></i>
               <input className="search-area align-middle" type="search" placeholder="Search" aria-label="Search"/>
