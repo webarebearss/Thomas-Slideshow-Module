@@ -255,7 +255,7 @@
   min-height: 100%;
 }
 .slideshow-modal .image-arrow-wrapper {
-  max-width: 90vh;
+  max-width: 85vh;
   margin: auto;
   overflow: hidden;
 }
@@ -295,7 +295,7 @@
   }
 }
 .slideshow-modal .caption-filmstrip-wrapper {
-  max-width: 90vh;
+  max-width: 85vh;
   margin: auto;
   overflow: hidden;
   height: 135px;
@@ -341,7 +341,7 @@
   letter-spacing: normal;
 }
 .slideshow-modal .filmstrip {
-  max-width: 90vh;
+  max-width: 85vh;
   margin: auto;
   overflow: hidden;
   -webkit-transition: height 0.25s linear;
