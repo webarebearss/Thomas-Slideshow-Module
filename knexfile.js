@@ -1,5 +1,3 @@
-const config = require('./config');
-
 module.exports = {
 
   development: {
@@ -7,7 +5,6 @@ module.exports = {
     connection: {
       database: 'bearbnb_dev',
       user:     'postgres',
-      password: config.password,
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -22,7 +19,6 @@ module.exports = {
     connection: {
       database: 'bearbnb_staging',
       user:     'postgres',
-      password: config.password,
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -43,8 +39,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'bearbnb',
-      user:     'postgres',
-      password: config.password,
+      user:     'postgres'
     },
     migrations: {
       directory: __dirname + '/db/migrations'
