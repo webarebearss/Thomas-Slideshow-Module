@@ -49,5 +49,8 @@
   "bugs": {
     "url": "https://github.com/airbnbers/Thomas-Slideshow-Module/issues"
   },
-  "homepage": "https://github.com/airbnbers/Thomas-Slideshow-Module#readme"
+  "homepage": "https://github.com/airbnbers/Thomas-Slideshow-Module#readme",
+  "jest": {
+    "verbose": true
+  }
 }

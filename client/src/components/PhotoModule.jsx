@@ -1,6 +1,6 @@
 import React from 'react';
 import PhotoGrid from './PhotoGrid.jsx';
-import '../styles/style.scss';
+// import '../styles/style.scss';
 
 class PhotoModule extends React.Component {
   constructor(props) {
