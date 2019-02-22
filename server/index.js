@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const knex = require('knex');
+knex = require('../db/index.js');
 const dbutils = require('../db/dbutils');
 
 const port = process.env.PORT || 3001;
