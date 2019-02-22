@@ -24,6 +24,7 @@
     "faker": "^4.1.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.1.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -51,6 +52,10 @@
   },
   "homepage": "https://github.com/airbnbers/Thomas-Slideshow-Module#readme",
   "jest": {
-    "verbose": true
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(scss|less)$": "identity-obj-proxy"
+    }
   }
 }
