@@ -10,9 +10,9 @@ exports.seed = function(knex) {
 function sampleImgSet(numOfListings) {
   let imgArr = [];
   let listingId = 1;
-  let imageCount = 6 + Math.floor((bearPics.length - 6) * Math.random())
-
+  
   while (listingId <= numOfListings) {
+    let imageCount = 6 + Math.floor((bearPics.length - 6) * Math.random())
     let pics = new BearPics();
     for (let i = 0; i < imageCount; i++) {
       imgArr.push(
