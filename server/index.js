@@ -6,7 +6,7 @@ const dbutils = require('../db/dbutils');
 
 const port = process.env.PORT || 3001;
 
-app.use('/rooms/:listingId/', express.static(__dirname + '../client/dist'));
+app.use('/rooms/:listingId/', express.static(__dirname + '/../client/dist'));
 
 // Include bundle.js in your proxy's index.html at https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-281924008100/bundle.js
 
