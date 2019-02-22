@@ -11,7 +11,6 @@
     "pg": "^7.8.0"
   },
   "scripts": {
-    "prestart": "node ./node_modules/knex/bin/cli.js migrate:latest && node ./node_modules/knex/bin/cli.js seed:run",
     "start": "node ./server/index.js",
     "build-sass": "sass --watch ./client/src/styles/:./client/dist/styles/",
     "build-webpack": "webpack --mode development --watch",

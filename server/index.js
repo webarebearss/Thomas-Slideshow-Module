@@ -7,6 +7,11 @@ const port = process.env.PORT || 3001;
 
 // Include bundle.js in your index.html at https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-281924008100/bundle.js
 
+knex.migrate.latest()
+  .then(function() {
+    return knex.seed.run();
+  })
+
 app.get('/rooms/:listingId/images', cors(), (req, res) => {
   console.log('Heard a GET request');
   dbutils.fetchImages(req.params.listingId)
