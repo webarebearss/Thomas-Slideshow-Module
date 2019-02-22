@@ -10,9 +10,10 @@ exports.seed = function(knex) {
 function sampleImgSet(numOfListings) {
   let imgArr = [];
   let listingId = 1;
-  let pics = new BearPics();
+  let imageCount = 6 + Math.floor((bearPics.length - 6) * Math.random())
 
   while (listingId <= numOfListings) {
+    let pics = new BearPics();
     for (let i = 0; i < imageCount; i++) {
       imgArr.push(
         {
@@ -29,14 +30,14 @@ function sampleImgSet(numOfListings) {
 }
 
 function BearPics() {
-  let lastUsed = null;
-  let proposedPic;
+  let lastUsed, proposedPic;
 
   this.generate = () => {
     proposedPic = Math.floor(Math.random() * bearPics.length);
     while (proposedPic === lastUsed) {
       proposedPic = Math.floor(Math.random() * bearPics.length);
     }
+  
     lastUsed = proposedPic;
     return bearPics[proposedPic];
   }
