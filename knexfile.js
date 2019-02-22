@@ -3,7 +3,7 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      host:     process.env.RDS_RDS_HOSTNAME,
+      host:     process.env.RDS_HOSTNAME,
       port:     process.env.RDS_PORT,
       database: process.env.RDS_DB_NAME,
       user:     process.env.RDS_USERNAME,
@@ -20,7 +20,7 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      host:     process.env.RDS_RDS_HOSTNAME,
+      host:     process.env.RDS_HOSTNAME,
       port:     process.env.RDS_PORT,
       database: process.env.RDS_DB_NAME,
       user:     process.env.RDS_USERNAME,
@@ -44,7 +44,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      host:     process.env.RDS_RDS_HOSTNAME,
+      host:     process.env.RDS_HOSTNAME,
       port:     process.env.RDS_PORT,
       database: process.env.RDS_DB_NAME,
       user:     process.env.RDS_USERNAME,
