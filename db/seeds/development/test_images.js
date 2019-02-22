@@ -13,8 +13,10 @@ function sampleImgSet(numOfListings) {
   function randomImgQuantity() {
     return 6 + Math.floor((bearPics.length - 6) * Math.random())
   }
+
   while (listingId <= numOfListings) {
-    for (let i = 0; i < randomImgQuantity(); i++) {
+    let imageCount = randomImgQuantity();
+    for (let i = 0; i < imageCount; i++) {
       imgArr.push(
         {
           imgUrl: gimmeBearPics(),
