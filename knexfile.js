@@ -3,9 +3,11 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'bearbnb_dev',
-      user:     'postgres',
-      password: process.env.DB_PW
+      host:     process.env.RDS_RDS_HOSTNAME,
+      port:     process.env.RDS_PORT,
+      database: process.env.RDS_DB_NAME,
+      user:     process.env.RDS_USERNAME,
+      password: process.env.RDS_PASSWORD
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -18,9 +20,11 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'bearbnb_staging',
-      user:     'postgres',
-      password: process.env.DB_PW
+      host:     process.env.RDS_RDS_HOSTNAME,
+      port:     process.env.RDS_PORT,
+      database: process.env.RDS_DB_NAME,
+      user:     process.env.RDS_USERNAME,
+      password: process.env.RDS_PASSWORD
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -40,9 +44,11 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'bearbnb',
-      user:     'postgres',
-      password: process.env.DB_PW
+      host:     process.env.RDS_RDS_HOSTNAME,
+      port:     process.env.RDS_PORT,
+      database: process.env.RDS_DB_NAME,
+      user:     process.env.RDS_USERNAME,
+      password: process.env.RDS_PASSWORD
     },
     migrations: {
       directory: __dirname + '/db/migrations'

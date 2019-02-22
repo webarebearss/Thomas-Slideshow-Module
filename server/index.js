@@ -1,14 +1,18 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-knex = require('../db/index.js');
+
+const knexConfig = require('../knexfile');
+let env = 'development';
+const knex = require('knex')(knexConfig[env]);
+
 const dbutils = require('../db/dbutils');
 
 const port = process.env.PORT || 3001;
 
 // Include bundle.js in your index.html at https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-281924008100/bundle.js
 
-knex.migrate.latest()
+knex.migrate.latest([knexConfig])
   .then(function() {
     return knex.seed.run();
   })
