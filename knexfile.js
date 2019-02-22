@@ -5,6 +5,7 @@ module.exports = {
     connection: {
       database: 'bearbnb_dev',
       user:     'postgres',
+      password: process.env.DB_PW
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -19,6 +20,7 @@ module.exports = {
     connection: {
       database: 'bearbnb_staging',
       user:     'postgres',
+      password: process.env.DB_PW
     },
     migrations: {
       directory: __dirname + '/db/migrations'
@@ -39,7 +41,8 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'bearbnb',
-      user:     'postgres'
+      user:     'postgres',
+      password: process.env.DB_PW
     },
     migrations: {
       directory: __dirname + '/db/migrations'
