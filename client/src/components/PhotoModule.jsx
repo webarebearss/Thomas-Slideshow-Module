@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoGrid from './PhotoGrid.jsx';
+import '../styles/style.scss';
 
 class PhotoModule extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class PhotoModule extends React.Component {
   componentDidMount() { 
     let listingId = window.location.pathname.split('/')[2];
     this.setSizeByScreen();
-    fetch (`http://localhost:3001/rooms/${listingId}/images`)
+    fetch (`/rooms/${listingId}/images`)
       .then(res => res.json())
       .then(images => this.setState({images}));
   };

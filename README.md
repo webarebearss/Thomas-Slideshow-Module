@@ -13,14 +13,16 @@
 
 ## Usage
 
-> npm start
+For deployment:
+Todo - run knex migrate and seed
+npm start
+
+Photo module for Bearbnb mock product page, to be integrated into proxy server
+Add bundle.js into your index.html at https://s3.us-east-2.amazonaws.com/elasticbeanstalk-us-east-2-281924008100/bundle.js
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
 
 ## Development
 Compile:
