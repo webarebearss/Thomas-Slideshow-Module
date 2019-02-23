@@ -10,14 +10,14 @@ exports.seed = function(knex) {
 function sampleImgSet(numOfListings) {
   let imgArr = [];
   let listingId = 1;
-  function randomImgQuantity() {
-    return 6 + Math.floor((bearPics.length - 6) * Math.random())
-  }
+  
   while (listingId <= numOfListings) {
-    for (let i = 0; i < randomImgQuantity(); i++) {
+    let imageCount = 6 + Math.floor((bearPics.length - 6) * Math.random())
+    let pics = new BearPics();
+    for (let i = 0; i < imageCount; i++) {
       imgArr.push(
         {
-          imgUrl: gimmeBearPics(),
+          imgUrl: pics.generate(),
           listingId,
           imgOrder: i,
           description: faker.fake("{{random.words}}, {{random.words}}, {{random.words}}")
@@ -29,8 +29,19 @@ function sampleImgSet(numOfListings) {
   return imgArr;
 }
 
-function gimmeBearPics() {
-  return bearPics[Math.floor(Math.random() * bearPics.length)]
+function BearPics() {
+  let lastUsed, proposedPic;
+
+  this.generate = () => {
+    proposedPic = Math.floor(Math.random() * bearPics.length);
+    while (proposedPic === lastUsed) {
+      proposedPic = Math.floor(Math.random() * bearPics.length);
+    }
+  
+    lastUsed = proposedPic;
+    return bearPics[proposedPic];
+  }
+
 }
 
 let bearPics = [
