@@ -265,8 +265,12 @@ $btn-margin: 106px;
 }
 
 // Slideshow modal
-.slideshow-modal {
 
+body.modal-open {
+  overflow: hidden;
+}
+
+.slideshow-modal {
   overflow: hidden;
 
   .modal-full {
