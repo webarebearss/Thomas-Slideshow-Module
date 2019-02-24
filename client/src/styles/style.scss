@@ -267,6 +267,8 @@ $btn-margin: 106px;
 // Slideshow modal
 .slideshow-modal {
 
+  overflow: hidden;
+
   .modal-full {
     width: 100%;
     left: 0;
