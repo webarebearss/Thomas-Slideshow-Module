@@ -45,3 +45,14 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+
+## API Endpoints
+
+GET /rooms/:listingId/images
+
+POST /rooms/:listingId/images
+
+PUT /rooms/:listingId/images
+
+DELETE /rooms/:listingId/images
+
