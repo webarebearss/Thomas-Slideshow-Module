@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 
 app.use('/rooms/:listingId/', express.static(__dirname + '/../client/dist'));
 
-knex.initialize();
+//knex.initialize();
 
 app.post('/rooms/:listingId/images', (req, res) => {
 

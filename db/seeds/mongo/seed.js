@@ -1,8 +1,12 @@
 const faker = require('faker');
 const Room = require('../../models/Room');
+const db = require('../../index')
 
-const seed = () => {
-  Room.create(sampleImgSet(100))
+const seed = async () => {
+  for (let i = 0; i < 1250; i++) {
+    await Room.create(sampleImgSet(8000))
+    console.log(i, ' out of 1250')
+  }
 }
 
 let runningCount = 1;
