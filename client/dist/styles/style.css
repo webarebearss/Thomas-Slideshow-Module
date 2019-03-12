@@ -215,6 +215,15 @@
   border: none;
 }
 
+@media (max-width: 576px) {
+  #share-modal .modal-dialog, #save-modal .modal-dialog {
+    margin: 0;
+  }
+  #share-modal .modal-content, #save-modal .modal-content {
+    width: 100vw;
+    min-height: 100vh;
+  }
+}
 .slideshow-modal .modal-full {
   width: 100%;
   left: 0;
@@ -255,6 +264,7 @@
   min-height: 100%;
 }
 .slideshow-modal .image-arrow-wrapper {
+  height: 68vh;
   max-width: 85vh;
   margin: auto;
   overflow: hidden;
@@ -262,12 +272,26 @@
 @media screen and (max-width: 576px) {
   .slideshow-modal .image-arrow-wrapper {
     width: 100vw;
+    height: 60vh;
   }
+}
+.slideshow-modal .carousel-item {
+  height: 100%;
+  width: 100%;
+  margin: auto;
 }
 .slideshow-modal .carousel-item img {
   object-fit: fill;
-  margin: 0 auto;
-  width: 100%;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+}
+.slideshow-modal .carousel-item-next, .slideshow-modal .carousel-item-prev {
+  display: flex;
+}
+.slideshow-modal .carousel-item.active {
+  display: flex;
 }
 .slideshow-modal .carousel-caption {
   position: relative;

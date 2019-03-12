@@ -1,24 +1,9 @@
 const faker = require('faker');
+const Room = require('../../models/Room');
 
-exports.seed = function(knex) {
-  return knex('images').del()
-    .then(async function () {
-      for (let i = 0; i < 2500; i++) {
-        await knex('images').insert(sampleImgSet(4000));
-        console.log(i, 'out of 2500')
-      }
-    });
-};
-
-// exports.seed = function(knex) {
-//   return knex('images').del()
-//     .then(function () {
-//       var data = sampleImgSet(5000);
-//       return knex('images').insert(data)
-//     })
-//   //for (let i = 0; i < 4000; i++) {
-//   //}
-// };
+const seed = () => {
+  Room.create(sampleImgSet(100))
+}
 
 let runningCount = 1;
 
@@ -46,7 +31,8 @@ function sampleImgSet(numOfListings) {
 }
 
 function BearPics() {
-  let lastUsed, proposedPic;
+  let lastUsed;
+  let proposedPic;
 
   this.generate = () => {
     proposedPic = Math.floor(Math.random() * bearPics.length);
@@ -86,35 +72,4 @@ let bearPics = [
   'https://i.imgur.com/keTGHHx.jpg'
 ];
 
-// -- SEED FOR USING FAKER IMAGES --
-
-// const faker = require('faker');
-
-// exports.seed = function(knex) {
-//   return knex('images').del()
-//     .then(function () {
-//       return knex('images').insert(sampleImgSet(100));
-//     });
-// };
-
-// function sampleImgSet(numOfListings) {
-//   let imgArr = [];
-//   let listingId = 1;
-//   function randomImgQuantity() {
-//     return 6 + Math.floor(25 * Math.random())
-//   }
-//   while (listingId <= numOfListings) {
-//     for (let i = 0; i < randomImgQuantity(); i++) {
-//       imgArr.push(
-//         {
-//           imgUrl: faker.image.image(),
-//           listingId,
-//           imgOrder: i,
-//           description: faker.fake("{{random.words}}, {{random.words}}, {{random.words}}")
-//         }
-//       )
-//     }
-//     listingId++;
-//   }
-//   return imgArr;
-// }
+seed();
